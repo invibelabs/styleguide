@@ -9,6 +9,23 @@ Base rules are the defaults. They are almost exclusively single element selector
 
 */
 
-@import 'base/typography';
-@import 'base/forms';
-@import 'base/buttons';
+// Settings
+@import 'settings/global';
+@import 'settings/colors';
+
+// Tools
+@import 'tools/vertical-rhythm';
+@import 'tools/mixins';
+@import 'tools/helpers';
+
+// Generic
+@import 'generic/normalize';
+@import 'generic/typography';
+
+// Base
+
+// Objects
+
+// Components
+
+// Trumps

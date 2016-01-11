@@ -1,0 +1,33 @@
+// =============================================================================
+// Colors
+// =============================================================================
+
+// Basic Colors
+$white:         rgba(255, 255, 255, 1);
+
+$grey-light:    rgba(227, 227, 227, 1.0);
+$grey:          rgba(217, 217, 217, 1);
+$grey-mid:      rgba(183, 183, 183, 1);
+$grey-mid-dark: rgba(164, 164, 164, 1.0);
+$grey-alt:      rgba(128, 128, 128, 1.0);
+$grey-dark:     rgba(109, 109, 109, 1);
+$grey-black:    rgba(92, 92, 92, 1.0);
+
+$black:         #494949;
+$black-dark:    #3E3E3E;
+
+// Brand Colors
+$primary-color:   rgba(242, 135, 97, 1.0);
+$secondary-color: rgba(161, 148, 213, 1.0);
+$secondary-dark:  rgba(97, 89, 128, 1.0);
+$secondary-light: rgba(224, 220, 241, 1.0);
+
+// UI
+$success-color:   rgba(75, 198, 125, 1.0);
+$error-color:     #B94A48;
+
+// Color Applications
+$text-color:      $secondary-dark;
+$link-color:      $success-color;
+$link-hover:      darken($success-color, 10%);
+$highlight:       rgb(252, 248, 227);

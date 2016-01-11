@@ -1,6 +1,6 @@
-# Hologram Github Theme Example
+# inVibe Styleguide
 
-This is an example web application using [Hologram](https://github.com/trulia/hologram) with the [Hologram Github Theme](https://github.com/wearecube/hologram-github-theme) to generate a styleguide.
+Bulit using [Hologram](https://github.com/trulia/hologram) with the [Hologram Github Theme](https://github.com/wearecube/hologram-github-theme) to generate a styleguide.
 
 ## Prerequisites
 

@@ -21,11 +21,11 @@ $blue:                    rgb(0, 121, 188);
 $purple:                  rgb(161, 148, 213);
 $orange:                  rgb(242, 135, 97);
 
-$grey-cool:               mix($grey, $purple, 50%);
+$grey-cool:               mix($grey, $purple, 65%);
 
 // ===== Brand =====
 
-$brand-primary:           rgb(97, 89, 128) !default;
+$brand-primary:           $purple !default;
 $brand-primary-accent:    $purple !default;
 $brand-secondary:         $orange !default;
 $brand-secondary-accent:  $orange !default;
@@ -122,3 +122,185 @@ $palettes: (
 
 // shadows
 // $shadow: transparentize(palette(greyscale, black-t), .5);
+
+// ===== Documentation =====
+
+/*doc
+---
+title: Usage
+name: 0_usage
+category: Palette
+---
+
+Below are swatches of the entire color palette. They should always be accessed using the function `palette($color, $tone)`. *The classes in the example HTML are for styleguide purposes only.*
+
+##### Example
+
+```
+// Set a variable to use in your styles
+$my-variable: palette(secondary, dark);
+
+// Or access colors from the palette directly
+.my-component {
+  background: palette(primary, base);
+  color: palette(greyscale-cool, x-light);
+}
+```
+*/
+
+/*doc
+---
+title: Primary
+name: 1_primary
+category: Palette
+---
+
+```html_example
+<div class="sg__palette primary--base"><p>Primary, base</p></div>
+<div class="sg__palette primary--light"><p>Primary, light</p></div>
+<div class="sg__palette primary--x-light"><p>Primary, x-light</p></div>
+<div class="sg__palette primary--dark"><p>Primary, dark</p></div>
+<div class="sg__palette primary--x-dark"><p>Primary, x-dark</p></div>
+<div class="sg__palette primary--accent"><p>Primary, accent</p></div>
+<div class="sg__palette primary--x-accent"><p>Primary, x-accent</p></div>
+<div class="sg__palette primary--trans"><p>Primary, trans</p></div>
+<div class="sg__palette primary--x-trans"><p>Primary, x-trans</p></div>
+<div class="sg__palette primary--xx-trans"><p>Primary, xx-trans</p></div>
+```
+
+*/
+
+/*doc
+---
+title: Secondary
+name: 2_secondary
+category: Palette
+---
+
+```html_example
+<div class="sg__palette secondary--base"><p>Secondary, base</p></div>
+<div class="sg__palette secondary--light"><p>Secondary, light</p></div>
+<div class="sg__palette secondary--x-light"><p>Secondary, x-light</p></div>
+<div class="sg__palette secondary--dark"><p>Secondary, dark</p></div>
+<div class="sg__palette secondary--x-dark"><p>Secondary, x-dark</p></div>
+<div class="sg__palette secondary--accent"><p>Secondary, accent</p></div>
+```
+
+*/
+
+/*doc
+---
+title: Greyscale
+name: 3_greyscale
+category: Palette
+---
+
+```html_example
+<div class="sg__palette greyscale--base"><p>Greyscale, base</p></div>
+<div class="sg__palette greyscale--light"><p>Greyscale, light</p></div>
+<div class="sg__palette greyscale--x-light"><p>Greyscale, x-light</p></div>
+<div class="sg__palette greyscale--xx-light"><p>Greyscale, xx-light</p></div>
+<div class="sg__palette greyscale--white"><p>Greyscale, white</p></div>
+<div class="sg__palette greyscale--white-t"><p>Greyscale, white-t</p></div>
+<div class="sg__palette greyscale--dark"><p>Greyscale, dark</p></div>
+<div class="sg__palette greyscale--x-dark"><p>Greyscale, x-dark</p></div>
+<div class="sg__palette greyscale--black"><p>Greyscale, black</p></div>
+<div class="sg__palette greyscale--black-t"><p>Greyscale, black-t</p></div>
+<div class="sg__palette greyscale--trans"><p>Greyscale, trans</p></div>
+<div class="sg__palette greyscale--x-trans"><p>Greyscale, x-trans</p></div>
+<div class="sg__palette greyscale--xx-trans"><p>Greyscale, xx-trans</p></div>
+```
+
+*/
+
+/*doc
+---
+title: Greyscale Cool
+name: 4_greyscale-cool
+category: Palette
+---
+
+```html_example
+<div class="sg__palette greyscale-cool--base"><p>Greyscale Cool, base</p></div>
+<div class="sg__palette greyscale-cool--light"><p>Greyscale Cool, light</p></div>
+<div class="sg__palette greyscale-cool--x-light"><p>Greyscale Cool, x-light</p></div>
+<div class="sg__palette greyscale-cool--dark"><p>Greyscale Cool, dark</p></div>
+<div class="sg__palette greyscale-cool--x-dark"><p>Greyscale Cool, x-dark</p></div>
+<div class="sg__palette greyscale-cool--trans"><p>Greyscale Cool, trans</p></div>
+<div class="sg__palette greyscale-cool--x-trans"><p>Greyscale Cool, x-trans</p></div>
+<div class="sg__palette greyscale-cool--xx-trans"><p>Greyscale Cool, xx-trans</p></div>
+```
+
+*/
+
+/*doc
+---
+title: Success
+name: 5_success
+category: Palette
+---
+
+```html_example
+<div class="sg__palette success--base"><p>Success, base</p></div>
+<div class="sg__palette success--light"><p>Success, light</p></div>
+<div class="sg__palette success--dark"><p>Success, dark</p></div>
+<div class="sg__palette success--trans"><p>Success, trans</p></div>
+<div class="sg__palette success--x-trans"><p>Success, x-trans</p></div>
+<div class="sg__palette success--xx-trans"><p>Success, xx-trans</p></div>
+```
+
+*/
+
+/*doc
+---
+title: Error
+name: 6_error
+category: Palette
+---
+
+```html_example
+<div class="sg__palette error--base"><p>Error, base</p></div>
+<div class="sg__palette error--light"><p>Error, light</p></div>
+<div class="sg__palette error--dark"><p>Error, dark</p></div>
+<div class="sg__palette error--trans"><p>Error, trans</p></div>
+<div class="sg__palette error--x-trans"><p>Error, x-trans</p></div>
+<div class="sg__palette error--xx-trans"><p>Error, xx-trans</p></div>
+```
+
+*/
+
+/*doc
+---
+title: Warning
+name: 7_warning
+category: Palette
+---
+
+```html_example
+<div class="sg__palette warning--base"><p>Warning, base</p></div>
+<div class="sg__palette warning--light"><p>Warning, light</p></div>
+<div class="sg__palette warning--dark"><p>Warning, dark</p></div>
+<div class="sg__palette warning--trans"><p>Warning, trans</p></div>
+<div class="sg__palette warning--x-trans"><p>Warning, x-trans</p></div>
+<div class="sg__palette warning--xx-trans"><p>Warning, xx-trans</p></div>
+```
+
+*/
+
+/*doc
+---
+title: Information
+name: 8_information
+category: Palette
+---
+
+```html_example
+<div class="sg__palette information--base"><p>Information, base</p></div>
+<div class="sg__palette information--light"><p>Information, light</p></div>
+<div class="sg__palette information--dark"><p>Information, dark</p></div>
+<div class="sg__palette information--trans"><p>Information, trans</p></div>
+<div class="sg__palette information--x-trans"><p>Information, x-trans</p></div>
+<div class="sg__palette information--xx-trans"><p>Information, xx-trans</p></div>
+```
+
+*/

@@ -1,0 +1,297 @@
+// ============================================================================
+// #STYLEGUIDE
+// Styles specific to the layout of the living styleguide
+// ============================================================================
+
+.sg__palette {
+  display: block;
+  width: 100%;
+  padding: 1.5em;
+
+  p {
+    font-weight: $font-weight--bold;
+    margin: 0;
+  }
+
+  // primary
+  &.primary--base {
+    background: palette(primary, base);
+    color: $white;
+  }
+
+  &.primary--light {
+    background: palette(primary, light);
+    color: $white;
+  }
+
+  &.primary--x-light {
+    background: palette(primary, x-light);
+  }
+
+  &.primary--dark {
+    background: palette(primary, dark);
+    color: $white;
+  }
+
+  &.primary--x-dark {
+    background: palette(primary, x-dark);
+    color: $white;
+  }
+
+  &.primary--accent {
+    background: palette(primary, accent);
+    color: $white;
+  }
+
+  &.primary--x-accent {
+    background: palette(primary, x-accent);
+    color: $white;
+  }
+
+  &.primary--trans {
+    background: palette(primary, trans);
+  }
+
+  &.primary--x-trans {
+    background: palette(primary, x-trans);
+  }
+
+  &.primary--xx-trans {
+    background: palette(primary, xx-trans);
+  }
+
+  // secondary
+  &.secondary--base {
+    background: palette(secondary, base);
+    color: $white;
+  }
+
+  &.secondary--light {
+    background: palette(secondary, light);
+    color: $white;
+  }
+
+  &.secondary--x-light {
+    background: palette(secondary, x-light);
+  }
+
+  &.secondary--dark {
+    background: palette(secondary, dark);
+    color: $white;
+  }
+
+  &.secondary--x-dark {
+    background: palette(secondary, x-dark);
+    color: $white;
+  }
+
+  &.secondary--accent {
+    background: palette(secondary, accent);
+    color: $white;
+  }
+
+  // greyscale
+  &.greyscale--base {
+    background: palette(greyscale, base);
+    color: $white;
+  }
+
+  &.greyscale--light {
+    background: palette(greyscale, light);
+  }
+
+  &.greyscale--x-light {
+    background: palette(greyscale, x-light);
+  }
+
+  &.greyscale--xx-light {
+    background: palette(greyscale, xx-light);
+  }
+
+  &.greyscale--white {
+    background: palette(greyscale, white);
+  }
+
+  &.greyscale--white-t {
+    background: palette(greyscale, white-t);
+  }
+
+  &.greyscale--dark {
+    background: palette(greyscale, dark);
+    color: $white;
+  }
+
+  &.greyscale--x-dark {
+    background: palette(greyscale, x-dark);
+    color: $white;
+  }
+
+  &.greyscale--black {
+    background: palette(greyscale, black);
+    color: $white;
+  }
+
+  &.greyscale--black-t {
+    background: palette(greyscale, black-t);
+    color: $white;
+  }
+
+  &.greyscale--trans {
+    background: palette(greyscale, trans);
+  }
+
+  &.greyscale--x-trans {
+    background: palette(greyscale, x-trans);
+  }
+
+  &.greyscale--xx-trans {
+    background: palette(greyscale, xx-trans);
+  }
+
+  // greyscale-cool
+  &.greyscale-cool--base {
+    background: palette(greyscale-cool, base);
+    color: $white;
+  }
+
+  &.greyscale-cool--light {
+    background: palette(greyscale-cool, light);
+  }
+
+  &.greyscale-cool--x-light {
+    background: palette(greyscale-cool, x-light);
+  }
+
+  &.greyscale-cool--xx-light {
+    background: palette(greyscale-cool, xx-light);
+  }
+
+  &.greyscale-cool--dark {
+    background: palette(greyscale-cool, dark);
+    color: $white;
+  }
+
+  &.greyscale-cool--x-dark {
+    background: palette(greyscale-cool, x-dark);
+    color: $white;
+  }
+
+  &.greyscale-cool--trans {
+    background: palette(greyscale-cool, trans);
+  }
+
+  &.greyscale-cool--x-trans {
+    background: palette(greyscale-cool, x-trans);
+  }
+
+  &.greyscale-cool--xx-trans {
+    background: palette(greyscale-cool, xx-trans);
+  }
+
+  // success
+  &.success--base {
+    background: palette(success, base);
+    color: $white;
+  }
+
+  &.success--light {
+    background: palette(success, light);
+  }
+
+  &.success--dark {
+    background: palette(success, dark);
+    color: $white;
+  }
+
+  &.success--trans {
+    background: palette(success, trans);
+  }
+
+  &.success--x-trans {
+    background: palette(success, x-trans);
+  }
+
+  &.success--xx-trans {
+    background: palette(success, xx-trans);
+  }
+
+  // error
+  &.error--base {
+    background: palette(error, base);
+    color: $white;
+  }
+
+  &.error--light {
+    background: palette(error, light);
+  }
+
+  &.error--dark {
+    background: palette(error, dark);
+    color: $white;
+  }
+
+  &.error--trans {
+    background: palette(error, trans);
+  }
+
+  &.error--x-trans {
+    background: palette(error, x-trans);
+  }
+
+  &.error--xx-trans {
+    background: palette(error, xx-trans);
+  }
+
+  // warning
+  &.warning--base {
+    background: palette(warning, base);
+  }
+
+  &.warning--light {
+    background: palette(warning, light);
+  }
+
+  &.warning--dark {
+    background: palette(warning, dark);
+    color: $white;
+  }
+
+  &.warning--trans {
+    background: palette(warning, trans);
+  }
+
+  &.warning--x-trans {
+    background: palette(warning, x-trans);
+  }
+
+  &.warning--xx-trans {
+    background: palette(warning, xx-trans);
+  }
+
+  // information
+  &.information--base {
+    background: palette(information, base);
+    color: $white;
+  }
+
+  &.information--light {
+    background: palette(information, light);
+  }
+
+  &.information--dark {
+    background: palette(information, dark);
+    color: $white;
+  }
+
+  &.information--trans {
+    background: palette(information, trans);
+  }
+
+  &.information--x-trans {
+    background: palette(information, x-trans);
+  }
+
+  &.information--xx-trans {
+    background: palette(information, xx-trans);
+  }
+}

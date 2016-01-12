@@ -99,7 +99,7 @@ A list of items in which the order *does* explicitly matter.
 
 // ===== Variables =====
 
-$text-color:      palette(primary, base) !default;
+$text-color:      palette(primary, x-dark) !default;
 $link-color:      palette(secondary, base) !default;
 $link-hover:      palette(secondary, dark) !default;
 $mark-background: palette(warning, x-trans) !default;

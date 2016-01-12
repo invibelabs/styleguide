@@ -75,4 +75,6 @@ Projects are structured following the [ITCSS](http://itcss.io/) guidelines. Each
 
 // 7. Trumps - Helpers and overrides.
 @import
-  'trumps/helpers';
+  'trumps/helpers',
+  // ONLY FOR STYLEGUIDE
+  'trumps/styleguide';

@@ -32,8 +32,10 @@ When using a `<button>` element, **always specify a `type`**. When using a `<a>`
 
 // ===== Variables =====
 
-$button-color:      palette(primary, base);
-$button-background: palette(greyscale-cool, x-trans);
+$button-color:               palette(greyscale-cool, dark);
+$button-color--hover:        palette(greyscale-cool, x-dark);
+$button-background:          palette(greyscale-cool, x-light);
+$button-background--hover:   palette(greyscale-cool, light);
 
 // ===== Standard Button =====
 
@@ -59,12 +61,14 @@ $button-background: palette(greyscale-cool, x-trans);
 
   &:hover {
     text-decoration: none;
+    color: $button-color--hover;
+    background-color: $button-background--hover;
   }
 
   &:focus {
     outline: none;
-    border-color: $link-hover;
-    box-shadow: 0 0 0 3px darken($link-color, 14%);
+    border-color: palette(primary, dark);
+    box-shadow: 0 0 0 3px palette(primary, x-dark);
   }
 }
 

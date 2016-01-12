@@ -1,200 +1,76 @@
-/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+// =========== Documentation ==========
 
-html {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
-}
+/*doc
+---
+title: Overview
+name: 0_overview
+category: Base CSS
+---
 
-::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
+## Architecture
+Projects are structured following the [ITCSS](http://itcss.io/) guidelines. Each directory below could be considered a "layer", building upon the last. From top to bottom, the styles go from generic to explicit, far reaching to localized, and low specificity to high specificity.
 
-::selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
+```
+|
+|– settings/                      # Global variables, config switches
+|   |– _defaults.scss             # Project variables and switches
+|   |– _colors.scss               # Color variables
+|
+|– tools/                         # Default mixins and functions
+|   |– _vertical-rhythm.scss      # Used by normalize to establish baseline grid
+|   |– _mixins.scss               #
+|   |– _responsive.scss           # Responsive breakpoint mixin
+|
+|– generic/                       # Ground-zero styles
+|   |– _normalize.scss            # Normalize with vertical rhythm and support-for
+|
+|– base/                          # Unclassed HTML elements
+|   |– _typography.scss           # Base unclassed type styles
+|   |– _images.scss               # Image element styles
+|   |– _page.scss                 # Page level styling
+|
+|– objects/                       # Cosmetic-free design patterns
+|   |– _.scss                     #
+|
+|– components/                    # Designed components, chunks of UI
+|   |– _.scss                     #
+|
+|– trumps/                        # Helpers and overrides
+|   |– _helpers.scss              # Helper classes
+|
+```
+*/
 
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
+@charset "UTF-8";
+// =========== Manifest ==========
 
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-    vertical-align: middle;
-}
+// 1. Settings - Global variables, config switches.
+@import
+  'settings/defaults',
+  'settings/colors';
 
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
+// 2. Tools - Default mixins and functions.
+@import
+  'tools/vertical-rhythm',
+  'tools/mixins',
+  'tools/responsive';
 
-textarea {
-    resize: vertical;
-}
+// 3. Generic - Ground-zero styles.
+@import
+  'generic/normalize';
 
-.browserupgrade {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
+// 4. Base - Unclassed HTML elements.
+@import
+  'base/typography',
+  'base/images',
+  'base/page';
 
+// 5. Objects - Cosmetic-free design patterns.
+@import
+  'objects/buttons';
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
+// 6. Components - Designed components, chunks of UI.
 
-@import 'base';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ==========================================================================
-   Media Queries
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-
-}
-
-@media print,
-       (-o-min-device-pixel-ratio: 5/4),
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi) {
-
-}
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-.hidden {
-    display: none !important;
-    visibility: hidden;
-}
-
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-}
-
-.invisible {
-    visibility: hidden;
-}
-
-.clearfix:before,
-.clearfix:after {
-    content: " ";
-    display: table;
-}
-
-.clearfix:after {
-    clear: both;
-}
-
-.clearfix {
-    *zoom: 1;
-}
-
-/* ==========================================================================
-   Print styles
-   ========================================================================== */
-
-@media print {
-    *,
-    *:before,
-    *:after {
-        background: transparent !important;
-        color: #000 !important;
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
-
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    thead {
-        display: table-header-group;
-    }
-
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-
-    img {
-        max-width: 100% !important;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
-}
+// 7. Trumps - Helpers and overrides.
+@import
+  'trumps/helpers';

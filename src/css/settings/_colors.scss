@@ -1,5 +1,5 @@
 // =============================================================================
-// Colors
+// Color variables
 // =============================================================================
 
 // Basic Colors
@@ -26,8 +26,20 @@ $secondary-light: rgba(224, 220, 241, 1.0);
 $success-color:   rgba(75, 198, 125, 1.0);
 $error-color:     #B94A48;
 
-// Color Applications
-$text-color:      $secondary-dark;
-$link-color:      $success-color;
-$link-hover:      darken($success-color, 10%);
-$highlight:       rgb(252, 248, 227);
+// ===== Color Applications =====
+
+// Page
+$background-color:  $white;
+$text-color:        $secondary-dark;
+
+// Links
+$link-color:        $success-color;
+$link-hover:        darken($success-color, 10%);
+
+// Buttons
+$button-color:      $text-color;
+$button-background: $grey-light;
+
+// Mark (highlight)
+$mark-background:   rgb(252, 248, 227);
+

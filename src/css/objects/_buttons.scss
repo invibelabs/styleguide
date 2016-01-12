@@ -1,0 +1,86 @@
+// =============================================================================
+// Buttons
+// =============================================================================
+
+/*doc
+---
+title: Buttons
+name: 2_buttons
+category: Base CSS
+---
+
+Buttons are used for **actions**, like in forms, while textual hyperlinks are used for **destinations**, or moving from one page to another.</p>
+
+## Default Buttons
+Use the standard—yet classy—`.btn` for form actions and primary page actions. These are used extensively around the site.
+
+When using a `<button>` element, **always specify a `type`**. When using a `<a>` element, **always add `role="button"` for accessibility**.
+
+```html_example
+<button class="btn" type="button">Button button</button>
+<a class="btn" href="#" role="button">Link button</a>
+<a class="btn btn--lg" href="#" role="button">Large button</a>
+<a class="btn btn--sm" href="#" role="button">Small button</a>
+```
+
+##### Full Width
+```html_example
+<a class="btn btn--full" href="#" role="button">Full button</a>
+```
+
+*/
+
+// ===== Standard Button =====
+
+.btn,
+%btn {
+  display: inline-block;
+  vertical-align: middle;
+  font: inherit;
+  font-weight: $font-weight--bold;
+  text-decoration: none;
+  text-align: center;
+  margin: 0;
+  cursor: pointer;
+  overflow: visible;
+  padding: $spacing-unit--tiny $spacing-unit--small;
+  height: auto;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  vertical-align: middle;
+  -webkit-appearance: none;
+  color: $button-color;
+  background-color: $button-background;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $link-hover;
+    box-shadow: 0 0 0 3px darken($link-color, 14%);
+  }
+}
+
+// Fix a Firefox bug whereby `input type="submit"` gains 2px extra padding.
+.btn::-moz-focus-inner,
+%btn::-moz-focus-inner {
+  border:  0;
+  padding: 0;
+}
+
+// Small button - less padding
+.btn--sm {
+  padding: round($spacing-unit--tiny / 3) $spacing-unit--small;
+}
+
+// Large button - more padding
+.btn--lg {
+  padding: $spacing-unit--small $spacing-unit;
+}
+
+// Full button - full width
+.btn--full {
+  width: 100%;
+}

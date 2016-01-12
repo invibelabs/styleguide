@@ -1,6 +1,5 @@
-@charset "UTF-8";
 // =============================================================================
-// Initialize your project
+// Initialize your project with global variables
 // =============================================================================
 
 // =========== Type ==========
@@ -10,30 +9,39 @@ $base-font-family: 'Gotham SSm A', 'Gotham SSm B', "HelveticaNeue-Light", "Helve
 $title-font-family: 'Gotham A', 'Gotham B', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 
 // Font Weights
-$light-weight: 300;
-$regular-weight: 400;
-$bold-weight: 700;
+$font-weight--light:   300;
+$font-weight--normal:  400;
+$font-weight--bold:    700;
 
 // The font size set on the root html element.
-$base-font-size: 16px;
+$base-font-size: 14px !default;
 
 // The base line height determines the basic unit of vertical rhythm.
-$base-line-height: 24px;
+$base-line-height: 21px !default;
 
 // The length unit in which to output vertical rhythm values.
 // Supported values: px, em, rem.
 $base-unit: 'em';
 
 // The font sizes for h1-h6.
-$h1-font-size: 2  * $base-font-size;     // 32px
-$h2-font-size: 1.75   * $base-font-size; // 26px
-$h3-font-size: 1.125 * $base-font-size;  // 18px
-$h4-font-size: 1     * $base-font-size;  // 16px
-$h5-font-size: 0.875 * $base-font-size;  // 14px
-$h6-font-size: 0.75  * $base-font-size;  // 12px
+$h1-font-size: 2.142857143  * $base-font-size;  // 32px
+$h2-font-size: 1.857142857  * $base-font-size;  // 26px
+$h3-font-size: 1.285714286  * $base-font-size;  // 18px
+$h4-font-size: 1.142857143  * $base-font-size;  // 16px
+$h5-font-size: 1            * $base-font-size;  // 14px
+$h6-font-size: 0.857142857  * $base-font-size;  // 12px
+
+// =========== Spacing ==========
+
+// Project spacing variables
+$spacing-unit:        $base-line-height;
+$spacing-unit--tiny:  round($spacing-unit / 4);
+$spacing-unit--small: round($spacing-unit / 2);
+$spacing-unit--large: round($spacing-unit * 2);
+$spacing-unit--yoge:  round($spacing-unit * 4);
 
 // The amount lists and blockquotes are indented.
-$indent-amount: 40px;
+$indent-amount: $spacing-unit--large;
 
 // =========== Grid ==========
 

@@ -11,6 +11,7 @@ Using a mixture of:
  Following general best practices such as:
 
 - [CSS Guidelines](http://cssguidelin.es/)
+- [Sass Guidelines](http://sass-guidelin.es/)
 - [Airbnb CSS / Sass Styleguide](https://github.com/airbnb/css)
 
 ## JS

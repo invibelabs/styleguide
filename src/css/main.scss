@@ -18,7 +18,8 @@ Projects are structured following the [ITCSS](http://itcss.io/) guidelines. Each
 |
 |– tools/                         # Default mixins and functions
 |   |– _vertical-rhythm.scss      # Used by normalize to establish baseline grid
-|   |– _mixins.scss               #
+|   |– _functions.scss            # Framework functions
+|   |– _mixins.scss               # Mixins to make life easier
 |   |– _responsive.scss           # Responsive breakpoint mixin
 |
 |– generic/                       # Ground-zero styles
@@ -52,6 +53,7 @@ Projects are structured following the [ITCSS](http://itcss.io/) guidelines. Each
 // 2. Tools - Default mixins and functions.
 @import
   'tools/vertical-rhythm',
+  'tools/functions',
   'tools/mixins',
   'tools/responsive';
 

@@ -2,44 +2,121 @@
 // Color variables
 // =============================================================================
 
-// Basic Colors
-$white:         rgba(255, 255, 255, 1);
+// ===== Config =====
 
-$grey-light:    rgba(227, 227, 227, 1.0);
-$grey:          rgba(217, 217, 217, 1);
-$grey-mid:      rgba(183, 183, 183, 1);
-$grey-mid-dark: rgba(164, 164, 164, 1.0);
-$grey-alt:      rgba(128, 128, 128, 1.0);
-$grey-dark:     rgba(109, 109, 109, 1);
-$grey-black:    rgba(92, 92, 92, 1.0);
+$transparent:             rgba(0, 0, 0, 0);
 
-$black:         #494949;
-$black-dark:    #3E3E3E;
+$black:                   rgb(17, 16, 16);
+$black-t:                 rgb(0, 0, 0);       // true black
+$white:                   rgb(252, 252, 252);
+$white-t:                 rgb(255, 255, 255); // true white
+$grey:                    rgb(167, 164, 164);
 
-// Brand Colors
-$primary-color:   rgba(242, 135, 97, 1.0);
-$secondary-color: rgba(161, 148, 213, 1.0);
-$secondary-dark:  rgba(97, 89, 128, 1.0);
-$secondary-light: rgba(224, 220, 241, 1.0);
+$red:                     rgb(185, 74, 72);
+$yellow:                  rgb(241, 196, 15);
+$green:                   rgb(75, 198, 125);
+$blue:                    rgb(0, 121, 188);
+$purple:                  rgb(161, 148, 213);
+$orange:                  rgb(242, 135, 97);
 
-// UI
-$success-color:   rgba(75, 198, 125, 1.0);
-$error-color:     #B94A48;
+$grey-cool:               mix($grey, $purple, 50%);
 
-// ===== Color Applications =====
+// ===== Brand =====
 
-// Page
-$background-color:  $white;
-$text-color:        $secondary-dark;
+$brand-primary:           rgb(97, 89, 128) !default;
+$brand-primary-accent:    $purple !default;
+$brand-secondary:         $orange !default;
+$brand-secondary-accent:  $orange !default;
 
-// Links
-$link-color:        $success-color;
-$link-hover:        darken($success-color, 10%);
+// ===== Utilities =====
 
-// Buttons
-$button-color:      $text-color;
-$button-background: $grey-light;
+$success:                 $green !default;
+$warning:                 $yellow !default;
+$error:                   $red !default;
+$information:             mix($grey-cool, $brand-primary, 70%) !default;
 
-// Mark (highlight)
-$mark-background:   rgb(252, 248, 227);
+// ===== Palettes =====
 
+$palettes: (
+  primary: (
+    base:       $brand-primary,
+    light:      mix($white, $brand-primary, 33%),
+    x-light:    mix($white, $brand-primary, 66%),
+    dark:       mix($black, $brand-primary, 33%),
+    x-dark:     mix($black, $brand-primary, 66%),
+    accent:     $brand-primary-accent,
+    x-accent:   saturate($brand-primary-accent, 25%),
+    trans:      transparentize($brand-primary, 0.50),
+    x-trans:    transparentize($brand-primary, 0.75),
+    xx-trans:   transparentize($brand-primary, 0.95)
+  ),
+  secondary: (
+    base:       $brand-secondary,
+    light:      mix($white, $brand-secondary, 33%),
+    x-light:    mix($white, $brand-secondary, 66%),
+    dark:       mix($black, $brand-secondary, 33%),
+    x-dark:     mix($black, $brand-secondary, 66%),
+    accent:     $brand-secondary-accent
+  ),
+  greyscale: (
+    base:       $grey,
+    light:      mix($white, $grey, 50%),
+    x-light:    mix($white, $grey, 75%),
+    xx-light:   mix($white, $grey, 85%),
+    white:      $white,
+    white-t:    $white-t,
+    dark:       mix($black, $grey, 40%),
+    x-dark:     mix($black, $grey, 60%),
+    black:      $black,
+    black-t:    $black-t,
+    trans:      transparentize($grey, 0.50),
+    x-trans:    transparentize($grey, 0.75),
+    xx-trans:   transparentize($grey, 0.95)
+  ),
+  greyscale-cool: (
+    base:       $grey-cool,
+    light:      mix($white, $grey-cool, 50%),
+    x-light:    mix($white, $grey-cool, 75%),
+    xx-light:   mix($white, $grey-cool, 85%),
+    dark:       mix($black, $grey-cool, 50%),
+    x-dark:     mix($black, $grey-cool, 75%),
+    trans:      transparentize($grey-cool, 0.50),
+    x-trans:    transparentize($grey-cool, 0.75),
+    xx-trans:   transparentize($grey-cool, 0.95)
+  ),
+  success: (
+    base:       $success,
+    light:      mix($white, $success, 33%),
+    dark:       mix($black, $success, 33%),
+    trans:      transparentize($success, 0.50),
+    x-trans:    transparentize($success, 0.75),
+    xx-trans:   transparentize($success, 0.95)
+  ),
+  error: (
+    base:       $error,
+    light:      mix($white, $error, 33%),
+    dark:       mix($black, $error, 33%),
+    trans:      transparentize($error, 0.50),
+    x-trans:    transparentize($error, 0.75),
+    xx-trans:   transparentize($error, 0.95)
+  ),
+  warning: (
+    base:       $warning,
+    light:      mix($white, $warning, 33%),
+    dark:       mix($black, $warning, 33%),
+    trans:      transparentize($warning, 0.50),
+    x-trans:    transparentize($warning, 0.75),
+    xx-trans:   transparentize($warning, 0.95)
+  ),
+  information: (
+    base:       $information,
+    light:      mix($white, $information, 33%),
+    dark:       mix($black, $information, 33%),
+    trans:      transparentize($information, 0.50),
+    x-trans:    transparentize($information, 0.75),
+    xx-trans:   transparentize($information, 0.95)
+  ),
+);
+
+// shadows
+// $shadow: transparentize(palette(greyscale, black-t), .5);

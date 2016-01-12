@@ -30,6 +30,11 @@ When using a `<button>` element, **always specify a `type`**. When using a `<a>`
 
 */
 
+// ===== Variables =====
+
+$button-color:      palette(primary, base);
+$button-background: palette(greyscale-cool, x-trans);
+
 // ===== Standard Button =====
 
 .btn,

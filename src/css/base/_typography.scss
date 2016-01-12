@@ -40,6 +40,7 @@ Styling for common inline HTML5 elements
 <p><small>This line of text is meant to be treated as fine print.</small></p>
 <p><strong>This line rendered as bold text.</strong></p>
 <p><em>This line rendered as italicized text.</em></p>
+<p>This line has an <a href="#">inline link</a>.</p>
 ```
 
 ## Blockquotes
@@ -95,6 +96,15 @@ A list of items in which the order *does* explicitly matter.
 ```
 
 */
+
+// ===== Variables =====
+
+$text-color:      palette(primary, base) !default;
+$link-color:      palette(secondary, base) !default;
+$link-hover:      palette(secondary, dark) !default;
+$mark-background: palette(warning, x-trans) !default;
+
+// ===== Typography =====
 
 // Standard text color
 body, h1, h2, h3, h4, h5, h6 {

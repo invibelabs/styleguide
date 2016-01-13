@@ -12,20 +12,20 @@ category: Base CSS
 Buttons are used for **actions**, like in forms, while textual hyperlinks are used for **destinations**, or moving from one page to another.</p>
 
 ## Default Buttons
-Use the standard—yet classy—`.btn` for form actions and primary page actions. These are used extensively around the site.
+Use the standard—yet classy—`.o-btn` for form actions and primary page actions. These are used extensively around the site.
 
 When using a `<button>` element, **always specify a `type`**. When using a `<a>` element, **always add `role="button"` for accessibility**.
 
 ```html_example
-<button class="btn" type="button">Button button</button>
-<a class="btn" href="#" role="button">Link button</a>
-<a class="btn btn--lg" href="#" role="button">Large button</a>
-<a class="btn btn--sm" href="#" role="button">Small button</a>
+<button class="o-btn" type="button">Button button</button>
+<a class="o-btn" href="#" role="button">Link button</a>
+<a class="o-btn o-btn--lg" href="#" role="button">Large button</a>
+<a class="o-btn o-btn--sm" href="#" role="button">Small button</a>
 ```
 
 ##### Full Width
 ```html_example
-<a class="btn btn--full" href="#" role="button">Full button</a>
+<a class="o-btn o-btn--full" href="#" role="button">Full button</a>
 ```
 
 */
@@ -38,12 +38,12 @@ $button-color--hover:        palette(greyscale-cool, x-dark);
 $button-background:          palette(greyscale-cool, x-light);
 $button-background--hover:   palette(greyscale-cool, light);
 
-$button-border-radius:       round($spacing-unit--tiny / 2);
+$button-border-radius:       halve($spacing-unit--tiny);
 
 // ===== Standard Button =====
 
-.btn,
-%btn {
+.o-btn,
+%o-btn {
   display: inline-block;
   vertical-align: middle;
   font: inherit;
@@ -76,23 +76,23 @@ $button-border-radius:       round($spacing-unit--tiny / 2);
 }
 
 // Fix a Firefox bug whereby `input type="submit"` gains 2px extra padding.
-.btn::-moz-focus-inner,
-%btn::-moz-focus-inner {
+.o-btn::-moz-focus-inner,
+%o-btn::-moz-focus-inner {
   border:  0;
   padding: 0;
 }
 
 // Small button - less padding
-.btn--sm {
-  padding: round($spacing-unit--tiny / 3) $spacing-unit--small;
+.o-btn--sm {
+  padding: third($spacing-unit--tiny) $spacing-unit--small;
 }
 
 // Large button - more padding
-.btn--lg {
+.o-btn--lg {
   padding: $spacing-unit--small $spacing-unit;
 }
 
 // Full button - full width
-.btn--full {
+.o-btn--full {
   width: 100%;
 }

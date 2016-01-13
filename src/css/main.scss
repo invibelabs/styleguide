@@ -20,6 +20,7 @@ Projects are structured following the [ITCSS](http://itcss.io/) guidelines. Each
 |   |– _vertical-rhythm.scss      # Used by normalize to establish baseline grid
 |   |– _functions.scss            # Framework functions
 |   |– _mixins.scss               # Mixins to make life easier
+|   |– _palettes.scss             # Generates full color palettes
 |   |– _responsive.scss           # Responsive breakpoint mixin
 |
 |– generic/                       # Ground-zero styles
@@ -55,6 +56,7 @@ Projects are structured following the [ITCSS](http://itcss.io/) guidelines. Each
   'tools/vertical-rhythm',
   'tools/functions',
   'tools/mixins',
+  'tools/palettes',
   'tools/responsive';
 
 // 3. Generic - Ground-zero styles.

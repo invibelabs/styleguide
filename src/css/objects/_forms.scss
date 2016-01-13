@@ -9,7 +9,7 @@ $form-label-color:   palette(primary, dark);
 $form-label-weight:  $font-weight--bold;
 $form-padding-unit:  $spacing-unit--small;
 $form-border-color:  palette(greyscale-cool, light);
-$form-border-radius: round($spacing-unit--tiny / 2);
+$form-border-radius: halve($spacing-unit--tiny);
 
 // Checkboxes and Radio Buttons
 $wtf-default-color: palette(primary, x-light);

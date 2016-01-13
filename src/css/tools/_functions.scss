@@ -6,3 +6,37 @@
 @function palette($palette, $tone: 'base') {
     @return map-get(map-get($palettes, $palette), $tone);
 }
+
+// Math helpers.
+//
+// Halve and double numbers, returning rounded integers. E.g.:
+//
+// .foo {
+//     padding: halve(3.2px);
+// }
+//
+
+@function quarter($invibe-number) {
+  @return round($invibe-number / 4);
+}
+
+@function third($invibe-number) {
+  @return round($invibe-number / 3);
+}
+
+@function halve($invibe-number) {
+  @return round($invibe-number / 2);
+}
+
+@function double($invibe-number) {
+  @return round($invibe-number * 2);
+}
+
+@function triple($invibe-number) {
+  @return round($invibe-number * 3);
+}
+
+
+@function quadruple($invibe-number) {
+  @return round($invibe-number * 4);
+}

@@ -4,7 +4,7 @@
 Using a mixture of:
 
 - Following [BEM](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)
-- Expanding into [BEMIT](http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/)
+- Expanding into [BEMIT](http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/), specifically the [namespaces](http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/)
 - Some principles from [OOCSS](http://oocss.org/)
 - For architecture, [ITCSS](http://itcss.io/)
 

@@ -16,33 +16,33 @@ Projects are structured following the [ITCSS](http://itcss.io/) guidelines. Each
 
 ```
 |
-|– settings/                      # Global variables, config switches
+|– settings/                    # Global variables, config switches
 |   |– _defaults.scss             # Project variables and switches
 |   |– _colors.scss               # Color variables
 |
-|– tools/                         # Default mixins and functions
+|– tools/                       # Default mixins and functions
 |   |– _vertical-rhythm.scss      # Used by normalize to establish baseline grid
 |   |– _functions.scss            # Framework functions
 |   |– _mixins.scss               # Mixins to make life easier
 |   |– _palettes.scss             # Generates full color palettes
 |   |– _responsive.scss           # Responsive breakpoint mixin
 |
-|– generic/                       # Ground-zero styles
+|– generic/                     # Ground-zero styles
 |   |– _normalize.scss            # Normalize with vertical rhythm and support-for
 |
-|– base/                          # Unclassed HTML elements
+|– base/                        # Unclassed HTML elements
 |   |– _typography.scss           # Base unclassed type styles
 |   |– _images.scss               # Image element styles
 |   |– _page.scss                 # Page level styling
 |
-|– objects/                       # Cosmetic-free design patterns
+|– objects/                     # Cosmetic-free design patterns
 |   |– _buttons.scss              # The base button object
 |   |– _forms.scss                # Form elements
 |
-|– components/                    # Designed components, chunks of UI
+|– components/                  # Designed components, chunks of UI
 |   |– _.scss                     #
 |
-|– trumps/                        # Helpers and overrides
+|– trumps/                      # Helpers and overrides
 |   |– _helpers.scss              # Helper classes
 |
 ```

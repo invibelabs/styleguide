@@ -34,8 +34,11 @@ When using a `<button>` element, **always specify a `type`**. When using a `<a>`
 
 $button-color:               palette(greyscale-cool, dark);
 $button-color--hover:        palette(greyscale-cool, x-dark);
+
 $button-background:          palette(greyscale-cool, x-light);
 $button-background--hover:   palette(greyscale-cool, light);
+
+$button-border-radius:       round($spacing-unit--tiny / 2);
 
 // ===== Standard Button =====
 
@@ -53,7 +56,7 @@ $button-background--hover:   palette(greyscale-cool, light);
   padding: $spacing-unit--tiny $spacing-unit--small;
   height: auto;
   border: 1px solid transparent;
-  border-radius: 3px;
+  border-radius: $button-border-radius;
   vertical-align: middle;
   -webkit-appearance: none;
   color: $button-color;
@@ -68,7 +71,7 @@ $button-background--hover:   palette(greyscale-cool, light);
   &:focus {
     outline: none;
     border-color: palette(primary, dark);
-    box-shadow: 0 0 0 3px palette(primary, x-dark);
+    box-shadow: 0 0 0 2px palette(primary, trans);
   }
 }
 

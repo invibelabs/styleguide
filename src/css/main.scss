@@ -1,3 +1,7 @@
+// ============================================================================
+// #MAIN
+// ============================================================================
+
 // =========== Documentation ==========
 
 /*doc
@@ -32,7 +36,8 @@ Projects are structured following the [ITCSS](http://itcss.io/) guidelines. Each
 |   |– _page.scss                 # Page level styling
 |
 |– objects/                       # Cosmetic-free design patterns
-|   |– _.scss                     #
+|   |– _buttons.scss              # The base button object
+|   |– _forms.scss                # Form elements
 |
 |– components/                    # Designed components, chunks of UI
 |   |– _.scss                     #
@@ -44,6 +49,7 @@ Projects are structured following the [ITCSS](http://itcss.io/) guidelines. Each
 */
 
 @charset "UTF-8";
+
 // =========== Manifest ==========
 
 // 1. Settings - Global variables, config switches.
@@ -71,7 +77,8 @@ Projects are structured following the [ITCSS](http://itcss.io/) guidelines. Each
 
 // 5. Objects - Cosmetic-free design patterns.
 @import
-  'objects/buttons';
+  'objects/buttons',
+  'objects/forms';
 
 // 6. Components - Designed components, chunks of UI.
 

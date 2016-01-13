@@ -1,0 +1,201 @@
+// ============================================================================
+// #FORMS
+// ============================================================================
+
+// ===== Variables =====
+
+// Standard Form Elements
+$form-label-color:   palette(primary, dark);
+$form-label-weight:  $font-weight--bold;
+$form-padding-unit:  $spacing-unit--small;
+$form-border-color:  palette(greyscale-cool, light);
+$form-border-radius: round($spacing-unit--tiny / 2);
+
+// Checkboxes and Radio Buttons
+$wtf-default-color: palette(primary, x-light);
+$wtf-focus-color:   palette(primary, base);
+$wtf-checked-color: palette(success, base);
+$wtf-active-color:  palette(success, base);
+
+// ===== Form Elements =====
+
+/*doc
+---
+title: Forms
+name: 3_forms
+category: Base CSS
+---
+
+```html_example
+<label>Label Text</label>
+<input type="text">
+```
+
+### Checkboxes
+
+```html_example
+<label class="form-control form-control--checkbox">
+  <input type="checkbox">
+  <span class="form-control__indicator"></span>
+  Check this custom checkbox
+</label>
+```
+
+### Radio Buttons
+
+```html_example
+<label class="form-control form-control--radio">
+  <input id="radio1" name="radio" type="radio">
+  <span class="form-control__indicator"></span>
+  Toggle this custom radio
+</label>
+<label class="form-control form-control--radio">
+  <input id="radio2" name="radio" type="radio">
+  <span class="form-control__indicator"></span>
+  Or toggle this other custom radio
+</label>
+```
+
+*/
+
+// <textarea name="sg-textarea" id="sg-textarea" cols="30" rows="10"></textarea>
+
+// the inputs with a text box get these base styles
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="url"],
+textarea {
+  padding: $form-padding-unit;
+  outline: none;
+  border: 1px solid $form-border-color;
+  border-radius: $form-border-radius;
+  background-color: none;
+  color: $text-color;
+  -webkit-font-smoothing: antialiased;
+  vertical-align: middle;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in;
+}
+
+textarea {
+  width: 100%;
+  min-height: 5em;
+}
+
+// Labels are bold text right above their input field
+label {
+  display: block;
+  line-height: 1.2;
+  -webkit-font-smoothing: antialiased;
+  color: $form-label-color;
+  font-weight: $form-label-weight;
+  margin-bottom: $spacing-unit--tiny;
+}
+
+// Placeholders
+::-webkit-input-placeholder {
+   -webkit-font-smoothing: antialiased;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   -webkit-font-smoothing: antialiased;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   -webkit-font-smoothing: antialiased;
+}
+
+:-ms-input-placeholder {
+   -webkit-font-smoothing: antialiased;
+}
+
+// ===== WTF Forms =====
+
+// Checkboxes and Radios
+.form-control {
+  display: inline-block;
+  position: relative;
+  padding-left: 1.5em;
+  color: $form-label-color;
+  cursor: pointer;
+}
+
+
+.form-control input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1; /* Put the input behind the label so it doesn't overlay text */
+}
+
+.form-control__indicator {
+  position: absolute;
+  top: .1875em;
+  left: 0;
+  display: block;
+  width:  1rem;
+  height: 1rem;
+  line-height: 1rem;
+  font-size: 65%;
+  color: $wtf-default-color;
+  text-align: center;
+  background-color: $wtf-default-color;
+  background-size: 50% 50%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+/* Hover state */
+/* Uncomment if you need it, but be aware of the sticky iOS states.
+.control:hover .form-control__indicator {
+  color: palette(greyscale, white-t);
+  background-color: #ccc;
+}
+*/
+
+/* Focus */
+.form-control input:focus ~ .form-control__indicator {
+  box-shadow: 0 0 0 .075rem palette(greyscale, white-t), 0 0 0 .2rem $wtf-focus-color;
+}
+
+/* Checked state */
+.form-control input:checked ~ .form-control__indicator {
+  color: palette(greyscale, white-t);
+  background-color: $wtf-checked-color;
+}
+
+/* Active */
+.form-control input:active ~ .form-control__indicator {
+  color: palette(greyscale, white-t);
+  background-color: $wtf-active-color;
+}
+
+/* Checkbox modifiers */
+.form-control--checkbox .form-control__indicator {
+  border-radius: .25rem;
+}
+.form-control--checkbox input:checked ~ .form-control__indicator {
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgOCA4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4IDgiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTYuNCwxTDUuNywxLjdMMi45LDQuNUwyLjEsMy43TDEuNCwzTDAsNC40bDAuNywwLjdsMS41LDEuNWwwLjcsMC43bDAuNy0wLjdsMy41LTMuNWwwLjctMC43TDYuNCwxTDYuNCwxeiINCgkvPg0KPC9zdmc+DQo=);
+}
+
+/* Radio modifiers */
+.form-control--radio .form-control__indicator {
+  border-radius: 50%;
+}
+.form-control--radio input:checked ~ .form-control__indicator {
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgOCA4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4IDgiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTQsMUMyLjMsMSwxLDIuMywxLDRzMS4zLDMsMywzczMtMS4zLDMtM1M1LjcsMSw0LDF6Ii8+DQo8L3N2Zz4NCg==);
+}
+
+/* Alternately, use another character */
+.form-control--x input:checked ~ .form-control__indicator {
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iOHB4IiBoZWlnaHQ9IjhweCIgdmlld0JveD0iMCAwIDggOCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgOCA4IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0xLjQsMEwwLDEuNGwwLjcsMC43bDEuOCwxLjhMMC43LDUuN0wwLDYuNGwxLjQsMS40bDAuNy0wLjdsMS44LTEuOGwxLjgsMS44bDAuNywwLjdsMS40LTEuNEw3LjEsNS43DQoJTDUuMywzLjlsMS44LTEuOGwwLjctMC43TDYuNCwwTDUuNywwLjdMMy45LDIuNUwyLjEsMC43QzIuMSwwLjcsMS40LDAsMS40LDB6Ii8+DQo8L3N2Zz4NCg==);
+}
+.form-control--dash input:checked ~ .form-control__indicator {
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iOHB4IiBoZWlnaHQ9IjhweCIgdmlld0JveD0iMCAwIDggOCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgOCA4IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0wLDN2Mmg4VjNIMHoiLz4NCjwvc3ZnPg0K)
+}

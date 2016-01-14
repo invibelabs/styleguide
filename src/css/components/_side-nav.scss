@@ -1,0 +1,105 @@
+// ============================================================================
+// #SIDE NAV
+// ============================================================================
+
+/*doc
+---
+title: Sidebar Navigation
+name: 0_side-nav
+category: Components
+---
+
+The sidebar navigation component. Use the `.is-active` class to highlight the link for the current page.
+
+```html_example
+<!-- Wrapper is for demo purposes only -->
+<div class="sg__palette primary--dark">
+  <nav class="c-side-nav">
+    <li class="c-side-nav__item">
+      <a class="c-side-nav__link" href="#">
+        <span class="c-side-nav__link__icon">?</span>
+        Link 1
+      </a>
+    </li>
+    <li class="c-side-nav__item">
+      <a class="c-side-nav__link is-active" href="#">
+        <span class="c-side-nav__link__icon">@</span>
+        Link 2
+      </a>
+    </li>
+    <li class="c-side-nav__item">
+      <a class="c-side-nav__link" href="#">
+        <span class="c-side-nav__link__icon">&</span>
+        Link 3
+      </a>
+    </li>
+    <li class="c-side-nav__item">
+      <a class="c-side-nav__link" href="#">
+        <span class="c-side-nav__link__icon">$</span>
+        Link 4
+      </a>
+    </li>
+  </nav>
+</div>
+```
+*/
+
+
+// ===== Variables =====
+
+$sbn-item-bg:            transparentize(palette(greyscale-cool, x-dark), 0.8);
+
+$sbn-item-color:         palette(greyscale-cool, base);
+$sbn-item-color--hover:  palette(greyscale, white-t);
+$sbn-item-color--active: palette(greyscale, white-t);
+
+$sbn-icon-color:         palette(primary, x-dark);
+$sbn-icon-color--active: palette(secondary, base);
+
+$sbn-item-padding:       $spacing-unit--small;
+
+// ===== Sidebar Navigation =====
+
+.c-side-nav {
+  max-width: 17em;
+}
+
+// Clear list styles for sidebar nav
+.c-side-nav__item {
+  list-style: none;
+  margin-bottom: halve($spacing-unit--tiny);
+}
+
+// The sidebar nav links are vertically stacked
+.c-side-nav__link {
+  display: block;
+  background: $sbn-item-bg;
+  color: $sbn-item-color;
+  font-weight: $font-weight--bold;
+  text-decoration: none;
+  padding: $sbn-item-padding;
+
+  // Hover state
+  &:hover {
+    color: $sbn-item-color--hover;
+  }
+
+  // Active state for the link
+  &.is-active {
+    color: $sbn-item-color--active;
+
+    // Active state for the icon inside of the link
+    .c-side-nav__link__icon {
+      color: $sbn-icon-color--active;
+    }
+  }
+}
+
+// The icons appear to the left of the link text
+.c-side-nav__link__icon {
+  display: inline-block;
+  width: 1.5em;
+  text-align: center;
+  color: $sbn-icon-color;
+  margin-right: $spacing-unit--tiny;
+}

@@ -1,0 +1,60 @@
+// ============================================================================
+// #BOX
+// ============================================================================
+
+/*doc
+---
+title: Box
+name: 1_box
+category: Layouts
+---
+
+Boxes are for boxing off content, using padding.
+
+```html_example
+<div class="o-box">
+  <p>I'm boxed content!</p>
+</div>
+<div class="o-box o-box--tiny">
+  <p>I'm tiny boxed content!</p>
+</div>
+<div class="o-box o-box--small">
+  <p>I'm small boxed content!</p>
+</div>
+<div class="o-box o-box--large">
+  <p>I'm large boxed content!</p>
+</div>
+```
+
+*/
+
+// ===== Variables =====
+
+$box-padding:        $spacing-unit;
+$box-padding--tiny:  quarter($spacing-unit);
+$box-padding--small: halve($spacing-unit);
+$box-padding--large: double($spacing-unit);
+
+// ===== Box for boxing off content =====
+
+.o-box,
+%o-box {
+  @extend %u-cf;
+  display: block;
+  padding: $box-padding;
+}
+
+.o-box--tiny,
+%o-box--tiny {
+  padding: $box-padding--tiny;
+}
+
+.o-box--small,
+%o-box--small {
+  padding: $box-padding--small;
+}
+
+.o-box--large,
+%o-box--large {
+  padding: $box-padding--large;
+}

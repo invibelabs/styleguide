@@ -36,6 +36,7 @@ Projects are structured following the [ITCSS](http://itcss.io/) guidelines. Each
 |   |– _page.scss                 # Page level styling
 |
 |– objects/                     # Cosmetic-free design patterns
+|   |– _box.scss                  # Boxed content for layout
 |   |– _buttons.scss              # The base button object
 |   |– _forms.scss                # Form elements
 |
@@ -77,6 +78,7 @@ Projects are structured following the [ITCSS](http://itcss.io/) guidelines. Each
 
 // 5. Objects - Cosmetic-free design patterns.
 @import
+  'objects/box',
   'objects/buttons',
   'objects/forms';
 

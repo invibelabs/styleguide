@@ -3,6 +3,7 @@
 // ============================================================================
 
 // ===== Hide =====
+
 .is-hidden {
   position: absolute;
   overflow: hidden;
@@ -21,20 +22,24 @@
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-.cf:before,
-.cf:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+.u-cf:before,
+.u-cf:after,
+%u-cf:before,
+%u-cf:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
 }
 
-.cf:after {
-    clear: both;
+.u-cf:after,
+%u-cf:after {
+  clear: both;
 }
 
 /**
  * For IE 6/7 only
  * Include this rule to trigger hasLayout and contain floats.
  */
-.cf {
-    *zoom: 1;
+.u-cf,
+%u-cf {
+  *zoom: 1;
 }

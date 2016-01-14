@@ -25,6 +25,8 @@ $my-variable: palette(secondary, dark);
 ```
 */
 
+// ===== Palette map =====
+
 $palettes: (
 
 /*doc
@@ -271,5 +273,6 @@ category: Palette
   ),
 );
 
-// shadows
-$shadow: transparentize(palette(greyscale, black-t), .5);
+// ===== Shadow =====
+
+$shadow: transparentize(palette(greyscale, black-t), .82);

@@ -42,7 +42,7 @@ Projects are structured following the [ITCSS](http://itcss.io/) guidelines. Each
 |   |– _forms.scss                # Form elements
 |
 |– components/                  # Designed components, chunks of UI
-|   |– _.scss                     #
+|   |– _main-header.scss          # The main app header bar
 |
 |– trumps/                      # Helpers and overrides
 |   |– _helpers.scss              # Helper classes
@@ -87,6 +87,8 @@ Projects are structured following the [ITCSS](http://itcss.io/) guidelines. Each
   'objects/forms';
 
 // 6. Components - Designed components, chunks of UI.
+@import
+  'components/main-header';
 
 // 7. Trumps - Helpers and overrides.
 @import

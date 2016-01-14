@@ -36,6 +36,7 @@ Projects are structured following the [ITCSS](http://itcss.io/) guidelines. Each
 |   |– _page.scss                 # Page level styling
 |
 |– objects/                     # Cosmetic-free design patterns
+|   |– _grid.scss                 # Grid using Susy
 |   |– _box.scss                  # Boxed content for layout
 |   |– _buttons.scss              # The base button object
 |   |– _forms.scss                # Form elements
@@ -64,7 +65,9 @@ Projects are structured following the [ITCSS](http://itcss.io/) guidelines. Each
   'tools/functions',
   'tools/mixins',
   'tools/palettes',
-  'tools/responsive';
+  'tools/responsive',
+  // Third party imports
+  'bower_components/susy/sass/susy';
 
 // 3. Generic - Ground-zero styles.
 @import
@@ -78,6 +81,7 @@ Projects are structured following the [ITCSS](http://itcss.io/) guidelines. Each
 
 // 5. Objects - Cosmetic-free design patterns.
 @import
+  'objects/grid',
   'objects/box',
   'objects/buttons',
   'objects/forms';

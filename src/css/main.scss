@@ -44,6 +44,7 @@ Projects are structured following the [ITCSS](http://itcss.io/) guidelines. Each
 |– components/                  # Designed components, chunks of UI
 |   |– _main-header.scss          # The main app header bar
 |   |– _side-nav.scss             # The sidebar navigation
+|   |– _page-header.scss          # The page header w/ actions
 |
 |– trumps/                      # Helpers and overrides
 |   |– _helpers.scss              # Helper classes
@@ -90,7 +91,8 @@ Projects are structured following the [ITCSS](http://itcss.io/) guidelines. Each
 // 6. Components - Designed components, chunks of UI.
 @import
   'components/main-header',
-  'components/side-nav';
+  'components/side-nav',
+  'components/page-header';
 
 // 7. Trumps - Helpers and overrides.
 @import

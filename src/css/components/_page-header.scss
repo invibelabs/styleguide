@@ -1,0 +1,56 @@
+// ============================================================================
+// #PAGE HEADER
+// ============================================================================
+
+/*doc
+---
+title: Page Header
+name: 1_page-header
+category: Components
+---
+
+The page header displays the title of the page along with some top level actions on the right. The layout uses flexbox, so be aware of [browser support](http://caniuse.com/#feat=flexbox).
+
+```html_example
+<div class="c-page-header">
+  <div class="c-page-header__main">
+    <h3 class="c-page-header__title">Page Title</h3>
+  </div>
+  <div class="c-page-header__actions">
+    <a class="o-btn c-page-header__action-item" href="#" role="button">Action</a>
+    <a class="o-btn c-page-header__action-item" href="#" role="button">Second Action</a>
+  </div>
+</div>
+```
+
+*/
+
+// ===== Page Header =====
+
+// The page header uses flexbox to create a row w/ title + actions
+.c-page-header {
+  display: flex;
+  padding: $spacing-unit;
+  align-items: center;
+}
+
+.c-page-header__main,
+.c-page-header__actions {
+  flex: 1;
+}
+
+// No extra margin necessary on the page title
+.c-page-header__title {
+  margin: 0;
+}
+
+// The actions are aligned to the right
+.c-page-header__actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+// Add marign to action items to separate them from eachother and the page title
+.c-page-header__action-item {
+  margin-left: $spacing-unit--small;
+}

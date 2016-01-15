@@ -1,0 +1,75 @@
+// ============================================================================
+// #PAGE NAV
+// ============================================================================
+
+/*doc
+---
+title: Page Navigation
+name: 3_page-nav
+category: Components
+---
+
+The page navigation is used for tab-like navigation. Use the `.is-active` class to highlight the link for the current page. The layout uses flexbox, so be aware of [browser support](http://caniuse.com/#feat=flexbox).
+
+```html_example
+<nav class="c-page-nav">
+  <li class="c-page-nav__item">
+    <a class="c-page-nav__link" href="#">Link 1</a>
+  </li>
+  <li class="c-page-nav__item">
+    <a class="c-page-nav__link is-active" href="#">Link 2</a>
+  </li>
+  <li class="c-page-nav__item">
+    <a class="c-page-nav__link" href="#">Link 3</a>
+  </li>
+</nav>
+```
+
+*/
+
+// ===== Variables =====
+
+$page-nav-bg:             palette(greyscale-cool, light);
+$page-nav-color:          palette(greyscale-cool, base);
+$page-nav-color--hover:   palette(primary, x-dark);
+$page-nav-color--active:  palette(primary, x-dark);
+
+$page-nav-border--active: palette(secondary, base);
+
+// ===== Page Navigation =====
+
+// The page nav bar wrapper
+.c-page-nav {
+  display: flex;
+  align-items: center;
+  background-color: $page-nav-bg;
+  padding: 0 $spacing-unit;
+}
+
+// Clear list item styles and set flex basis sizing
+.c-page-nav__item {
+  list-style: none;
+  flex: 0 0 25%;
+}
+
+// Style the page nav links
+.c-page-nav__link {
+  display: block;
+  height: 100%;
+  padding: $spacing-unit--small;
+  color: $page-nav-color;
+  font-weight: $font-weight--bold;
+  text-decoration: none;
+  text-align: center;
+  border-bottom: 2px solid transparent;
+
+  &:hover {
+    color: $page-nav-color--hover;
+    border-bottom: 2px solid $page-nav-border--active;
+  }
+
+  &.is-active {
+    color: $page-nav-color--active;
+    border-bottom-color: $page-nav-border--active;
+  }
+}

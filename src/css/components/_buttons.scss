@@ -1,0 +1,103 @@
+// ============================================================================
+// #BUTTONS
+// ============================================================================
+
+/*doc
+---
+title: Buttons - Special
+name: 3_buttons
+category: Base CSS
+---
+
+```html_example
+<button class="o-btn c-btn--action" type="button">Action Button</button>
+<a class="o-btn c-btn--dark" href="#" role="button">Dark Button</a>
+<a class="o-btn c-btn--hollow" href="#" role="button">Hollow Button</a>
+<a class="o-btn c-btn--plain" href="#" role="button">Plain Button</a>
+<a class="o-btn c-btn--subtle" href="#" role="button">Subtle Button</a>
+```
+
+*/
+
+// ===== Variables =====
+
+$btn--action__color:         palette(greyscale, white-t);
+$btn--action__bg:            palette(success, base);
+$btn--action__color--hover:  palette(greyscale, white-t);
+$btn--action__bg--hover:     palette(success, dark);
+
+$btn--dark__color:           palette(greyscale, white-t);
+$btn--dark__bg:              palette(primary, dark);
+$btn--dark__color--hover:    palette(greyscale, white-t);
+$btn--dark__bg--hover:       palette(primary, x-dark);
+
+$btn--hollow__color:         $text-color;
+$btn--hollow__border:        $text-color;
+$btn--hollow__color--hover:  darken($text-color, 10%);
+$btn--hollow__border--hover: darken($text-color, 10%);
+
+$btn--plain__color:         $text-color;
+$btn--plain__color--hover:  darken($text-color, 10%);
+
+$btn--subtle__color:         palette(greyscale-cool, base);
+$btn--subtle__color--hover:  palette(greyscale-cool, dark);
+
+// ===== Button Components =====
+
+// The action button is the color of success
+.c-btn--action {
+  color: $btn--action__color;
+  background-color: $btn--action__bg;
+
+  &:hover {
+    color: $btn--action__color--hover;
+    background-color: $btn--action__bg--hover;
+  }
+}
+
+// The dark button is the a dark purple
+.c-btn--dark {
+  color: $btn--dark__color;
+  background-color: $btn--dark__bg;
+
+  &:hover {
+    color: $btn--dark__color--hover;
+    background-color: $btn--dark__bg--hover;
+  }
+}
+
+
+// Hollow button with border
+.c-btn--hollow {
+  color: $btn--hollow__color;
+  border: 1px solid $btn--hollow__border;
+  background-color: transparent;
+
+  &:hover {
+    color: $btn--hollow__color--hover;
+    border: 1px solid $btn--hollow__border--hover;
+    background-color: transparent;
+  }
+}
+
+// Plain button in regular text color
+.c-btn--plain {
+  color: $btn--plain__color;
+  background-color: transparent;
+
+  &:hover {
+    color: $btn--plain__color--hover;
+    background-color: transparent;
+  }
+}
+
+// Subtle button has no border and lighter text color
+.c-btn--subtle {
+  color: $btn--subtle__color;
+  background-color: transparent;
+
+  &:hover {
+    color: $btn--subtle__color--hover;
+    background-color: transparent;
+  }
+}

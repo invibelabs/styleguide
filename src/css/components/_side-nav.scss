@@ -5,7 +5,7 @@
 /*doc
 ---
 title: Sidebar Navigation
-name: 2_side-nav
+name: 4_side-nav
 category: Components
 ---
 
@@ -17,26 +17,34 @@ The sidebar navigation component. Use the `.is-active` class to highlight the li
   <nav class="c-side-nav">
     <li class="c-side-nav__item">
       <a class="c-side-nav__link" href="#">
-        <span class="c-side-nav__link__icon">?</span>
-        Link 1
+        <svg viewBox="0 0 8 8" class="ic c-side-nav__link__icon">
+          <use xlink:href="dist/images/open-iconic.svg#people" class="ic__people"></use>
+        </svg>
+        Lists
       </a>
     </li>
     <li class="c-side-nav__item">
       <a class="c-side-nav__link is-active" href="#">
-        <span class="c-side-nav__link__icon">@</span>
-        Link 2
+        <svg viewBox="0 0 8 8" class="ic c-side-nav__link__icon">
+          <use xlink:href="dist/images/open-iconic.svg#phone" class="ic__phone"></use>
+        </svg>
+        Stimuli
       </a>
     </li>
     <li class="c-side-nav__item">
       <a class="c-side-nav__link" href="#">
-        <span class="c-side-nav__link__icon">&</span>
-        Link 3
+        <svg viewBox="0 0 8 8" class="ic c-side-nav__link__icon">
+          <use xlink:href="dist/images/open-iconic.svg#task" class="ic__task"></use>
+        </svg>
+        Questions
       </a>
     </li>
     <li class="c-side-nav__item">
       <a class="c-side-nav__link" href="#">
-        <span class="c-side-nav__link__icon">$</span>
-        Link 4
+        <svg viewBox="0 0 8 8" class="ic c-side-nav__link__icon">
+          <use xlink:href="dist/images/open-iconic.svg#pie-chart" class="ic__pie-chart"></use>
+        </svg>
+        Reports
       </a>
     </li>
   </nav>
@@ -91,6 +99,7 @@ $sbn-item-padding:       $spacing-unit--small;
     // Active state for the icon inside of the link
     .c-side-nav__link__icon {
       color: $sbn-icon-color--active;
+      fill: $sbn-icon-color--active;
     }
   }
 }
@@ -101,5 +110,6 @@ $sbn-item-padding:       $spacing-unit--small;
   width: 1.5em;
   text-align: center;
   color: $sbn-icon-color;
+  fill: $sbn-icon-color;
   margin-right: $spacing-unit--tiny;
 }

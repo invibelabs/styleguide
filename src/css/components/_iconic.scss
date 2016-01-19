@@ -1,0 +1,48 @@
+// ============================================================================
+// #ICONIC
+// ============================================================================
+
+/*doc
+---
+title: Icons
+name: 0_icons
+category: Components
+---
+
+Icons are from [Iconic](https://useiconic.com/open) and use the SVG sprite.
+
+```html_example
+<svg viewBox="0 0 8 8" class="ic ic--small">
+  <use xlink:href="dist/images/open-iconic.svg#heart" class="ic__heart"></use>
+</svg>
+
+<svg viewBox="0 0 8 8" class="ic">
+  <use xlink:href="dist/images/open-iconic.svg#heart" class="ic__heart"></use>
+</svg>
+
+<svg viewBox="0 0 8 8" class="ic ic--med">
+  <use xlink:href="dist/images/open-iconic.svg#heart" class="ic__heart"></use>
+</svg>
+
+<svg viewBox="0 0 8 8" class="ic ic--large">
+  <use xlink:href="dist/images/open-iconic.svg#heart" class="ic__account-login"></use>
+</svg>
+```
+*/
+
+.ic {
+  width: 1em;
+  height: 1em;
+}
+
+.ic--small {
+  @include font-size(10px);
+}
+
+.ic--med {
+  @include font-size(18px);
+}
+
+.ic--large {
+  @include font-size(26px);
+}

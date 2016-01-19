@@ -4,7 +4,7 @@
 
 /*doc
 ---
-title: Buttons - Special
+title: Button Variations
 name: 3_buttons
 category: Base CSS
 ---
@@ -15,6 +15,43 @@ category: Base CSS
 <a class="o-btn c-btn--hollow" href="#" role="button">Hollow Button</a>
 <a class="o-btn c-btn--plain" href="#" role="button">Plain Button</a>
 <a class="o-btn c-btn--subtle" href="#" role="button">Subtle Button</a>
+```
+*/
+
+/*doc
+---
+title: Specialty Buttons
+name: 1_specialty_buttons
+category: Components
+---
+
+### Icon Buttons
+```html_example
+<a class="o-btn c-btn--dark c-btn--icon-left" href="#" role="button">
+  <svg viewBox="0 0 8 8" class="ic">
+    <use xlink:href="dist/images/open-iconic.svg#account-login" class="ic__account-login"></use>
+  </svg>
+  Logout
+</a>
+<a class="o-btn c-btn--action c-btn--icon-right" href="#" role="button">
+  Be Awesome
+  <svg viewBox="0 0 8 8" class="ic">
+    <use xlink:href="dist/images/open-iconic.svg#bolt" class="ic__bolt"></use>
+  </svg>
+</a>
+```
+
+### Button Group
+
+```html_example
+<div class="c-btn-group">
+  <a href="#" class="o-btn c-btn-group__left" role="button">Action</a>
+  <a href="#" class="o-btn c-btn-group__right" role="button">
+    <svg viewBox="0 0 8 8" class="ic">
+      <use xlink:href="dist/images/open-iconic.svg#chevron-bottom" class="ic__chevron-bottom"></use>
+    </svg>
+  </a>
+</div>
 ```
 
 */
@@ -42,15 +79,17 @@ $btn--plain__color--hover:  darken($text-color, 10%);
 $btn--subtle__color:         palette(greyscale-cool, base);
 $btn--subtle__color--hover:  palette(greyscale-cool, dark);
 
-// ===== Button Components =====
+// ===== Button Variants =====
 
 // The action button is the color of success
 .c-btn--action {
   color: $btn--action__color;
+  fill: $btn--action__color;
   background-color: $btn--action__bg;
 
   &:hover {
     color: $btn--action__color--hover;
+    fill: $btn--action__color--hover;
     background-color: $btn--action__bg--hover;
   }
 }
@@ -58,10 +97,12 @@ $btn--subtle__color--hover:  palette(greyscale-cool, dark);
 // The dark button is the a dark purple
 .c-btn--dark {
   color: $btn--dark__color;
+  fill: $btn--dark__color;
   background-color: $btn--dark__bg;
 
   &:hover {
     color: $btn--dark__color--hover;
+    fill: $btn--dark__color--hover;
     background-color: $btn--dark__bg--hover;
   }
 }
@@ -70,11 +111,13 @@ $btn--subtle__color--hover:  palette(greyscale-cool, dark);
 // Hollow button with border
 .c-btn--hollow {
   color: $btn--hollow__color;
+  fill: $btn--hollow__color;
   border: 1px solid $btn--hollow__border;
   background-color: transparent;
 
   &:hover {
     color: $btn--hollow__color--hover;
+    fill: $btn--hollow__color--hover;
     border: 1px solid $btn--hollow__border--hover;
     background-color: transparent;
   }
@@ -83,10 +126,12 @@ $btn--subtle__color--hover:  palette(greyscale-cool, dark);
 // Plain button in regular text color
 .c-btn--plain {
   color: $btn--plain__color;
+  fill: $btn--plain__color;
   background-color: transparent;
 
   &:hover {
     color: $btn--plain__color--hover;
+    fill: $btn--plain__color--hover;
     background-color: transparent;
   }
 }
@@ -94,10 +139,39 @@ $btn--subtle__color--hover:  palette(greyscale-cool, dark);
 // Subtle button has no border and lighter text color
 .c-btn--subtle {
   color: $btn--subtle__color;
+  fill: $btn--subtle__color;
   background-color: transparent;
 
   &:hover {
     color: $btn--subtle__color--hover;
+    fill: $btn--subtle__color--hover;
     background-color: transparent;
   }
+}
+
+// ===== Button Components =====
+
+// Separate the icon from the button text
+.c-btn--icon-left {
+  .ic {
+    margin-right: $spacing-unit--tiny;
+  }
+}
+
+// Separate the icon from the button text
+.c-btn--icon-right {
+  .ic {
+    margin-left: $spacing-unit--tiny;
+  }
+}
+
+// Button groups have no border radius on the inside edges to make them feel connected
+.c-btn-group__left {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.c-btn-group__right {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }

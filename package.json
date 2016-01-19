@@ -1,7 +1,7 @@
 {
-  "name": "hologram-github-theme-example",
+  "name": "invibe-styleguide",
   "version": "0.0.0",
-  "description": "Example project that uses the Hologram Github Theme for the styleguide",
+  "description": "A living style guide for front-end development at inVibe",
   "scripts": {
     "clean": "rimraf dist styleguide",
     "copy:html": "copyfiles -u 1 'src/**/*.html' dist",

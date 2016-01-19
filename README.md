@@ -1,4 +1,4 @@
-# inVibe Styleguide
+# [inVibe Styleguide](http://invibelabs.github.io/styleguide/styleguide/index.html)
 
 Bulit using [Hologram](https://github.com/trulia/hologram) with the [Hologram Github Theme](https://github.com/wearecube/hologram-github-theme) to generate a styleguide.
 

@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Base CSS &ndash; inVibe Styleguide</title>
+
+    <!-- Styleguide CSS -->
+    <link rel="stylesheet" href="styles/hgt-syntax.css">
+    <link rel="stylesheet" href="styles/hgt.css">
+
+    <!-- Source CSS -->
+    
+      
+        <link rel="stylesheet" href="dist/css/main.css">
+      
+    
+</head>
+
+  <body class="hgt-body">
+    <div class="hgt-pagehead">
+      <div class="hgt-container">
+        <nav class="hgt-pagehead-nav" role="navigation">
+          <a href="index.html"
+             class="hgt-pagehead-nav-item ">
+            Home
+          </a>
+
+          
+          <a href="layouts.html"
+             class="hgt-pagehead-nav-item ">
+            Layouts
+          </a>
+          
+          <a href="components.html"
+             class="hgt-pagehead-nav-item ">
+            Components
+          </a>
+          
+          <a href="base_css.html"
+             class="hgt-pagehead-nav-item selected">
+            Base CSS
+          </a>
+          
+          <a href="palette.html"
+             class="hgt-pagehead-nav-item ">
+            Palette
+          </a>
+          
+          <a href="index.html"
+             class="hgt-pagehead-nav-item ">
+            
+          </a>
+          
+        </nav>
+
+        <h1 class="hgt-pagehead-title">inVibe Styleguide</h1>
+      </div>
+    </div>
+
+    <div class="hgt-styleguide hgt-container">
+      <div class="hgt-columns">
+        
+          <div class="hgt-column one-fourth">
+            <nav class="hgt-menu">
+              
+                
+                  <a href="#0_overview" class="hgt-menu-item">Overview</a>
+                
+              
+                
+                  <a href="#1_typography" class="hgt-menu-item">Typography</a>
+                
+              
+                
+                  <a href="#2_buttons" class="hgt-menu-item">Buttons</a>
+                
+              
+                
+                  <a href="#3_buttons" class="hgt-menu-item">Button Variations</a>
+                
+              
+                
+                  <a href="#4_forms" class="hgt-menu-item">Forms</a>
+                
+              
+            </nav>
+          </div>
+        
+
+        <div class="hgt-column three-fourths">
+          <div class="hgt-content">
+<h1 id="0_overview" class="styleguide">Overview</h1>
+
+<h2>Architecture</h2>
+<p class="styleguide">Projects are structured following the <a class="styleguide" href="http://itcss.io/" title="http://itcss.io/">ITCSS</a> guidelines. Each directory below could be considered a &quot;layer&quot;, building upon the last. From top to bottom, the styles go from generic to explicit, far reaching to localized, and low specificity to high specificity.</p><div class="codeBlock">
+  <div class="highlight">
+    <pre>|
+|– settings/                    # Global variables, config switches
+|   |– _defaults.scss             # Project variables and switches
+|   |– _colors.scss               # Color variables
+|
+|– tools/                       # Default mixins and functions
+|   |– _vertical-rhythm.scss      # Used by normalize to establish baseline grid
+|   |– _functions.scss            # Framework functions
+|   |– _mixins.scss               # Mixins to make life easier
+|   |– _palettes.scss             # Generates full color palettes
+|   |– _responsive.scss           # Responsive breakpoint mixin
+|
+|– generic/                     # Ground-zero styles
+|   |– _normalize.scss            # Normalize with vertical rhythm and support-for
+|
+|– base/                        # Unclassed HTML elements
+|   |– _typography.scss           # Base unclassed type styles
+|   |– _images.scss               # Image element styles
+|   |– _page.scss                 # Page level styling
+|
+|– objects/                     # Cosmetic-free design patterns
+|   |– _grid.scss                 # Grid using Susy
+|   |– _box.scss                  # Boxed content for layout
+|   |– _buttons.scss              # The base button object
+|   |– _forms.scss                # Form elements
+|
+|– components/                  # Designed components, chunks of UI
+|   |– _iconic.scss               # Iconic svg sprite icons
+|   |– _buttons.scss              # Special button components
+|   |– _main-header.scss          # The main app header bar
+|   |– _side-nav.scss             # The sidebar navigation
+|   |– _page-header.scss          # The page header w/ actions
+|   |– _page-nav.scss             # The horizontal page nav bar
+|
+|– trumps/                      # Helpers and overrides
+|   |– _helpers.scss              # Helper classes
+|</pre>
+  </div>
+</div>
+<h1 id="1_typography" class="styleguide">Typography</h1>
+
+<h2>Headings</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;h1&gt;</span>Heading 1<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;h2&gt;</span>Heading 2<span class="nt">&lt;/h2&gt;</span>
+<span class="nt">&lt;h3&gt;</span>Heading 3<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;h4&gt;</span>Heading 4<span class="nt">&lt;/h4&gt;</span>
+<span class="nt">&lt;h5&gt;</span>Heading 5<span class="nt">&lt;/h5&gt;</span>
+<span class="nt">&lt;h6&gt;</span>Heading 6<span class="nt">&lt;/h6&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h2>Body Text</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
+<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;p&gt;</span>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.<span class="nt">&lt;/p&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h2>Inline text elements</h2>
+<p class="styleguide">Styling for common inline HTML5 elements</p><div class="codeExample">
+  <div class="exampleOutput">
+    <p>You can use the mark tag to <mark>highlight</mark> text.</p>
+<p><del>This line of text is meant to be treated as deleted text.</del></p>
+<p><s>This line of text is meant to be treated as no longer accurate.</s></p>
+<p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
+<p><u>This line of text will render as underlined</u></p>
+<p><small>This line of text is meant to be treated as fine print.</small></p>
+<p><strong>This line rendered as bold text.</strong></p>
+<p><em>This line rendered as italicized text.</em></p>
+<p>This line has an <a href="#">inline link</a>.</p>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;p&gt;</span>You can use the mark tag to <span class="nt">&lt;mark&gt;</span>highlight<span class="nt">&lt;/mark&gt;</span> text.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;&lt;del&gt;</span>This line of text is meant to be treated as deleted text.<span class="nt">&lt;/del&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;&lt;s&gt;</span>This line of text is meant to be treated as no longer accurate.<span class="nt">&lt;/s&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;&lt;ins&gt;</span>This line of text is meant to be treated as an addition to the document.<span class="nt">&lt;/ins&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;&lt;u&gt;</span>This line of text will render as underlined<span class="nt">&lt;/u&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;&lt;small&gt;</span>This line of text is meant to be treated as fine print.<span class="nt">&lt;/small&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;&lt;strong&gt;</span>This line rendered as bold text.<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;&lt;em&gt;</span>This line rendered as italicized text.<span class="nt">&lt;/em&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>This line has an <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>inline link<span class="nt">&lt;/a&gt;</span>.<span class="nt">&lt;/p&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h2>Blockquotes</h2>
+<p class="styleguide">Wrap <code class="styleguide">&lt;blockquote&gt;</code> around any HTML as the quote. For straight quotes, we recommend a <code class="styleguide">&lt;p&gt;</code>.</p><div class="codeExample">
+  <div class="exampleOutput">
+    <blockquote>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+</blockquote>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;blockquote&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/blockquote&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h2>Lists</h2>
+
+<h3>Unordered</h3>
+<p class="styleguide">A list of items in which the order does <em>not</em> explicitly matter.</p><div class="codeExample">
+  <div class="exampleOutput">
+    <ul>
+  <li>Lorem ipsum dolor sit amet</li>
+  <li>Nulla volutpat aliquam velit
+    <ul>
+      <li>Phasellus iaculis neque</li>
+      <li>Purus sodales ultricies</li>
+      <li>Vestibulum laoreet porttitor sem</li>
+      <li>Ac tristique libero volutpat at</li>
+    </ul>
+  </li>
+  <li>Faucibus porta lacus fringilla vel</li>
+  <li>Aenean sit amet erat nunc</li>
+  <li>Eget porttitor lorem</li>
+</ul>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;ul&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Lorem ipsum dolor sit amet<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Nulla volutpat aliquam velit
+    <span class="nt">&lt;ul&gt;</span>
+      <span class="nt">&lt;li&gt;</span>Phasellus iaculis neque<span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;</span>Purus sodales ultricies<span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;</span>Vestibulum laoreet porttitor sem<span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;</span>Ac tristique libero volutpat at<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Faucibus porta lacus fringilla vel<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Aenean sit amet erat nunc<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Eget porttitor lorem<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h3>Ordered</h3>
+<p class="styleguide">A list of items in which the order <em>does</em> explicitly matter.</p><div class="codeExample">
+  <div class="exampleOutput">
+    <ol>
+  <li>Lorem ipsum dolor sit amet</li>
+  <li>Nulla volutpat aliquam velit
+    <ol>
+      <li>Phasellus iaculis neque</li>
+      <li>Purus sodales ultricies</li>
+      <li>Vestibulum laoreet porttitor sem</li>
+      <li>Ac tristique libero volutpat at</li>
+    </ol>
+  </li>
+  <li>Faucibus porta lacus fringilla vel</li>
+  <li>Aenean sit amet erat nunc</li>
+  <li>Eget porttitor lorem</li>
+</ol>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;ol&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Lorem ipsum dolor sit amet<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Nulla volutpat aliquam velit
+    <span class="nt">&lt;ol&gt;</span>
+      <span class="nt">&lt;li&gt;</span>Phasellus iaculis neque<span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;</span>Purus sodales ultricies<span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;</span>Vestibulum laoreet porttitor sem<span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;</span>Ac tristique libero volutpat at<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ol&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Faucibus porta lacus fringilla vel<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Aenean sit amet erat nunc<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Eget porttitor lorem<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ol&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="2_buttons" class="styleguide">Buttons</h1>
+<p class="styleguide">Buttons are used for <strong>actions</strong>, like in forms, while textual hyperlinks are used for <strong>destinations</strong>, or moving from one page to another.</p></p>
+<h2>Default Buttons</h2>
+<p class="styleguide">Use the standard—yet classy—<code class="styleguide">.o-btn</code> for form actions and primary page actions. These are used extensively around the site.</p><p class="styleguide">When using a <code class="styleguide">&lt;button&gt;</code> element, <strong>always specify a <code class="styleguide">type</code></strong>. When using a <code class="styleguide">&lt;a&gt;</code> element, <strong>always add <code class="styleguide">role=&quot;button&quot;</code> for accessibility</strong>.</p><div class="codeExample">
+  <div class="exampleOutput">
+    <button class="o-btn" type="button">Button button</button>
+<a class="o-btn" href="#" role="button">Link button</a>
+<a class="o-btn o-btn--lg" href="#" role="button">Large button</a>
+<a class="o-btn o-btn--sm" href="#" role="button">Small button</a>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"o-btn"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Button button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"o-btn"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span><span class="nt">&gt;</span>Link button<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"o-btn o-btn--lg"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span><span class="nt">&gt;</span>Large button<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"o-btn o-btn--sm"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span><span class="nt">&gt;</span>Small button<span class="nt">&lt;/a&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h5>Full Width</h5>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <a class="o-btn o-btn--full" href="#" role="button">Full button</a>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"o-btn o-btn--full"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span><span class="nt">&gt;</span>Full button<span class="nt">&lt;/a&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="3_buttons" class="styleguide">Button Variations</h1>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <button class="o-btn c-btn--action" type="button">Action Button</button>
+<a class="o-btn c-btn--dark" href="#" role="button">Dark Button</a>
+<a class="o-btn c-btn--hollow" href="#" role="button">Hollow Button</a>
+<a class="o-btn c-btn--plain" href="#" role="button">Plain Button</a>
+<a class="o-btn c-btn--subtle" href="#" role="button">Subtle Button</a>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"o-btn c-btn--action"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Action Button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"o-btn c-btn--dark"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span><span class="nt">&gt;</span>Dark Button<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"o-btn c-btn--hollow"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span><span class="nt">&gt;</span>Hollow Button<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"o-btn c-btn--plain"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span><span class="nt">&gt;</span>Plain Button<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"o-btn c-btn--subtle"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span><span class="nt">&gt;</span>Subtle Button<span class="nt">&lt;/a&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="4_forms" class="styleguide">Forms</h1>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <label>Label Text</label>
+<input type="text">
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;label&gt;</span>Label Text<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h3>Checkboxes</h3>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <label class="o-form-control o-form-control--checkbox">
+  <input type="checkbox">
+  <span class="o-form-control__indicator"></span>
+  Check this custom checkbox
+</label>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"o-form-control o-form-control--checkbox"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"o-form-control__indicator"</span><span class="nt">&gt;&lt;/span&gt;</span>
+  Check this custom checkbox
+<span class="nt">&lt;/label&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h3>Radio Buttons</h3>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <label class="o-form-control o-form-control--radio">
+  <input id="radio1" name="radio" type="radio">
+  <span class="o-form-control__indicator"></span>
+  Toggle this custom radio
+</label>
+<label class="o-form-control o-form-control--radio">
+  <input id="radio2" name="radio" type="radio">
+  <span class="o-form-control__indicator"></span>
+  Or toggle this other custom radio
+</label>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"o-form-control o-form-control--radio"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"radio1"</span> <span class="na">name=</span><span class="s">"radio"</span> <span class="na">type=</span><span class="s">"radio"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"o-form-control__indicator"</span><span class="nt">&gt;&lt;/span&gt;</span>
+  Toggle this custom radio
+<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"o-form-control o-form-control--radio"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"radio2"</span> <span class="na">name=</span><span class="s">"radio"</span> <span class="na">type=</span><span class="s">"radio"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"o-form-control__indicator"</span><span class="nt">&gt;&lt;/span&gt;</span>
+  Or toggle this other custom radio
+<span class="nt">&lt;/label&gt;</span></pre>
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="hgt-footer">
+      Built using <a href="https://github.com/trulia/hologram">Hologram</a> and <a href="https://github.com/wearecube/hologram-github-theme">Hologram Github Theme</a>
+    </footer>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="scripts/vendor/jquery.waypoints.min.js"></script>
+  <script src="scripts/vendor/sticky.min.js"></script>
+  <script src="scripts/vendor/infinite.min.js"></script>
+  <script src="scripts/hgt.js"></script>
+
+  
+    
+      <script type="text/javascript" src="dist/scripts/main.js"></script>
+    
+  
+
+  
+</body>
+</html>

@@ -60,7 +60,7 @@ $timeline__node-size: 8px;
   position: relative;
   display: block;
   margin-bottom: $spacing-unit;
-  padding-left: $spacing-unit;
+  padding-left: $spacing-unit--med;
   border-left: 1px solid $timeline-border;
 
   // Each node has a dot to separate segments of the timeline

@@ -30,7 +30,7 @@ The page header displays the title of the page along with some top level actions
 // The page header uses flexbox to create a row w/ title + actions
 .c-page-header {
   display: flex;
-  padding: $spacing-unit;
+  padding: $spacing-unit $spacing-unit--med;
   align-items: center;
 }
 

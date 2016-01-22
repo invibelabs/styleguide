@@ -38,6 +38,7 @@ $h6-font-size: 0.857142857  * $base-font-size;  // 12px
 $spacing-unit:        $base-line-height;
 $spacing-unit--tiny:  round($spacing-unit / 4);
 $spacing-unit--small: round($spacing-unit / 2);
+$spacing-unit--med:   round($spacing-unit + ($spacing-unit / 2));
 $spacing-unit--large: round($spacing-unit * 2);
 $spacing-unit--yoge:  round($spacing-unit * 4);
 

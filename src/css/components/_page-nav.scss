@@ -43,7 +43,7 @@ $page-nav-border--active: palette(secondary, base);
   display: flex;
   align-items: center;
   background-color: $page-nav-bg;
-  padding: 0 $spacing-unit;
+  padding: 0 $spacing-unit--med;
 }
 
 // Clear list item styles and set flex basis sizing

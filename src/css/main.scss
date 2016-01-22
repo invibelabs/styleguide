@@ -37,6 +37,7 @@ Projects are structured following the [ITCSS](http://itcss.io/) guidelines. Each
 |
 |– objects/                     # Cosmetic-free design patterns
 |   |– _grid.scss                 # Grid using Susy
+|   |– _containers.scss           # Generaul use containers
 |   |– _box.scss                  # Boxed content for layout
 |   |– _buttons.scss              # The base button object
 |   |– _forms.scss                # Form elements
@@ -88,6 +89,7 @@ Projects are structured following the [ITCSS](http://itcss.io/) guidelines. Each
 // 5. Objects - Cosmetic-free design patterns.
 @import
   'objects/grid',
+  'objects/containers',
   'objects/box',
   'objects/buttons',
   'objects/forms';

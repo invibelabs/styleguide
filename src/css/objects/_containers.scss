@@ -1,0 +1,30 @@
+// ============================================================================
+// #CONTAINERS
+// ============================================================================
+
+/*doc
+---
+title: Containers
+name: 1_containers
+category: Layouts
+---
+
+```html_example
+<div class="o-page-container">
+  <h1>My Page</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil ipsa atque, dicta. Nobis consectetur dicta sequi, quo quidem porro quas ad asperiores quia, libero labore ut doloribus iure totam deserunt!</p>
+</div>
+```
+
+*/
+
+// ===== Variables =====
+
+$page-container--gutter:  $spacing-unit--med;
+
+// ===== Timeline =====
+
+.o-page-container {
+  @extend %cf;
+  padding: 0 $page-container--gutter;
+}

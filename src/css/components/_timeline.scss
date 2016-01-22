@@ -1,0 +1,78 @@
+// ============================================================================
+// #TIMELINE
+// ============================================================================
+
+/*doc
+---
+title: Timeline
+name: 6_timeline
+category: Components
+---
+
+```html_example
+<div class="c-timeline">
+  <div class="c-timeline__node">
+    <h3>Step 1</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil ipsa atque, dicta. Nobis consectetur dicta sequi, quo quidem porro quas ad asperiores quia, libero labore ut doloribus iure totam deserunt!</p>
+  </div>
+  <div class="c-timeline__node">
+    <h3>Step 2</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil ipsa atque, dicta. Nobis consectetur dicta sequi, quo quidem porro quas ad asperiores quia, libero labore ut doloribus iure totam deserunt!</p>
+  </div>
+  <div class="c-timeline__node">
+    <h3>Step 3</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil ipsa atque, dicta. Nobis consectetur dicta sequi, quo quidem porro quas ad asperiores quia, libero labore ut doloribus iure totam deserunt!</p>
+  </div>
+</div>
+```
+
+*/
+
+// ===== Variables =====
+
+$timeline-border:     palette(primary, dark);
+$timeline__node-size: 8px;
+
+// ===== Timeline =====
+
+// The timeline wrapper
+.c-timeline {
+  @extend %u-cf;
+  display: block;
+  position: relative;
+
+  // Add an end to the timeline
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: -4px;
+    display: block;
+    background-color: $timeline-border;
+    height: 1px;
+    width: 9px;
+  }
+}
+
+// Each node has a border left to create a timeline
+.c-timeline__node {
+  @extend %u-cf;
+  position: relative;
+  display: block;
+  margin-bottom: $spacing-unit;
+  padding-left: $spacing-unit;
+  border-left: 1px solid $timeline-border;
+
+  // Each node has a dot to separate segments of the timeline
+  &:before {
+    content: '';
+    position: absolute;
+    top: -( $spacing-unit / 2 ) - ( $timeline__node-size / 2 );
+    left: -$timeline__node-size / 2;
+    display: block;
+    background-color: $timeline-border;
+    height: $timeline__node-size;
+    width: $timeline__node-size;
+    border-radius: $timeline__node-size / 2;
+  }
+}

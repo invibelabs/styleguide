@@ -46,6 +46,7 @@ Projects are structured following the [ITCSS](http://itcss.io/) guidelines. Each
 |– components/                  # Designed components, chunks of UI
 |   |– _iconic.scss               # Iconic svg sprite icons
 |   |– _buttons.scss              # Special button components
+|   |– _tables.scss               # Special table related components
 |   |– _main-header.scss          # The main app header bar
 |   |– _side-nav.scss             # The sidebar navigation
 |   |– _page-header.scss          # The page header w/ actions
@@ -100,6 +101,7 @@ Projects are structured following the [ITCSS](http://itcss.io/) guidelines. Each
 @import
   'components/iconic',
   'components/buttons',
+  'components/tables',
   'components/main-header',
   'components/side-nav',
   'components/page-header',

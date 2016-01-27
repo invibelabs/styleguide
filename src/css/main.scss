@@ -41,6 +41,7 @@ Projects are structured following the [ITCSS](http://itcss.io/) guidelines. Each
 |   |– _box.scss                  # Boxed content for layout
 |   |– _buttons.scss              # The base button object
 |   |– _forms.scss                # Form elements
+|   |– _tables.scss               # Tables
 |
 |– components/                  # Designed components, chunks of UI
 |   |– _iconic.scss               # Iconic svg sprite icons
@@ -92,7 +93,8 @@ Projects are structured following the [ITCSS](http://itcss.io/) guidelines. Each
   'objects/containers',
   'objects/box',
   'objects/buttons',
-  'objects/forms';
+  'objects/forms',
+  'objects/tables';
 
 // 6. Components - Designed components, chunks of UI.
 @import

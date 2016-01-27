@@ -1,0 +1,71 @@
+// ============================================================================
+// #TABLES
+// ============================================================================
+
+/*doc
+---
+title: Tables
+name: 5_tables
+category: Base CSS
+---
+
+```html_example
+<table class="o-tbl">
+  <thead class="o-tbl__head">
+    <tr>
+      <th class="o-tbl__cell">Name</th>
+      <th class="o-tbl__cell">ID</th>
+      <th class="o-tbl__cell">Favorite Color</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="o-tbl__cell">Jim</td>
+      <td class="o-tbl__cell">00001</td>
+      <td class="o-tbl__cell">Blue</td>
+    </tr>
+    <tr>
+      <td class="o-tbl__cell">Sue</td>
+      <td class="o-tbl__cell">00002</td>
+      <td class="o-tbl__cell">Red</td>
+    </tr>
+    <tr>
+      <td class="o-tbl__cell">Barb</td>
+      <td class="o-tbl__cell">00003</td>
+      <td class="o-tbl__cell">Green</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+*/
+
+// ===== Variables =====
+
+$tbl-head-color:   palette(greyscale-cool, base);
+$tbl-border-color: palette(greyscale-cool, x-light);
+
+// ===== Table =====
+
+// Standard table object with left aligned content
+.o-tbl {
+  text-align: left;
+  border-collapse: collapse;
+}
+
+// 100% width table
+.o-tbl--fit {
+  @extend .o-tbl;
+  min-width: 100%;
+}
+
+// The table head uses a different text color
+.o-tbl__head {
+  color: $tbl-head-color;
+}
+
+// Table cell default padding and border
+.o-tbl__cell {
+  padding: $spacing-unit--tiny $spacing-unit--small;
+  border: 1px solid $tbl-border-color;
+}

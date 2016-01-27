@@ -26,6 +26,8 @@ category: Components
 ---
 
 ### Icon Buttons
+Add icons to your buttons by using the `c-btn--icon-left` or `c-btn--icon-right` classes on the button itself. Please note, you must place the icon in the proper order in the markup for left or right side icon placement.
+
 ```html_example
 <a class="o-btn c-btn--dark c-btn--icon-left" href="#" role="button">
   <svg viewBox="0 0 8 8" class="ic">
@@ -42,6 +44,7 @@ category: Components
 ```
 
 ### Button Group
+Group together a text button with an icon for primary/secondary actions, or add a dropdown for multiple actions.
 
 ```html_example
 <div class="c-btn-group">

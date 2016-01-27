@@ -35,12 +35,12 @@ $h6-font-size: 0.857142857  * $base-font-size;  // 12px
 // =========== Spacing ==========
 
 // Project spacing variables
-$spacing-unit:        $base-line-height;
-$spacing-unit--tiny:  round($spacing-unit / 4);
-$spacing-unit--small: round($spacing-unit / 2);
-$spacing-unit--med:   round($spacing-unit + ($spacing-unit / 2));
-$spacing-unit--large: round($spacing-unit * 2);
-$spacing-unit--yoge:  round($spacing-unit * 4);
+$spacing-unit:        $base-line-height;        // 21px
+$spacing-unit--tiny:  round($spacing-unit / 4); // 5px
+$spacing-unit--small: round($spacing-unit / 2); // 11px
+$spacing-unit--med:   round($spacing-unit + ($spacing-unit / 2)); // 32px
+$spacing-unit--large: round($spacing-unit * 2); // 42px
+$spacing-unit--yoge:  round($spacing-unit * 4); // 84px
 
 // The amount lists and blockquotes are indented.
 $indent-amount: $spacing-unit--large;

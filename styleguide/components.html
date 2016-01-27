@@ -73,6 +73,14 @@
                 
               
                 
+                  <a href="#1_table_elements" class="hgt-menu-item">Table Elements</a>
+                
+              
+                
+                  <a href="#2_Cards" class="hgt-menu-item">Cards</a>
+                
+              
+                
                   <a href="#2_main-header" class="hgt-menu-item">Main Header</a>
                 
               
@@ -142,7 +150,7 @@
 <h1 id="1_specialty_buttons" class="styleguide">Specialty Buttons</h1>
 
 <h3>Icon Buttons</h3>
-<div class="codeExample">
+<p class="styleguide">Add icons to your buttons by using the <code class="styleguide">c-btn--icon-left</code> or <code class="styleguide">c-btn--icon-right</code> classes on the button itself. Please note, you must place the icon in the proper order in the markup for left or right side icon placement.</p><div class="codeExample">
   <div class="exampleOutput">
     <a class="o-btn c-btn--dark c-btn--icon-left" href="#" role="button">
   <svg viewBox="0 0 8 8" class="ic">
@@ -177,7 +185,7 @@
 </div>
 
 <h3>Button Group</h3>
-<div class="codeExample">
+<p class="styleguide">Group together a text button with an icon for primary/secondary actions, or add a dropdown for multiple actions.</p><div class="codeExample">
   <div class="exampleOutput">
     <div class="c-btn-group">
   <a href="#" class="o-btn c-btn-group__left" role="button">Action</a>
@@ -198,6 +206,158 @@
       <span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"dist/images/open-iconic.svg#chevron-bottom"</span> <span class="na">class=</span><span class="s">"ic__chevron-bottom"</span><span class="nt">&gt;&lt;/use&gt;</span>
     <span class="nt">&lt;/svg&gt;</span>
   <span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="1_table_elements" class="styleguide">Table Elements</h1>
+
+<h3>Table Head</h3>
+<p class="styleguide">Make a table head borderless, as shown below, by using the class <code class="styleguide">c-tbl__head--plain</code>.</p>
+<h3>Table Body</h3>
+<p class="styleguide">Make a table body background color, as shown below, by using the class <code class="styleguide">c-tbl__body--white</code>.</p>
+<h3>Table Cell Button</h3>
+<p class="styleguide">Make a table cell a button, as shown below, by using the class <code class="styleguide">c-tbl__cell--btn</code>.</p><div class="codeExample">
+  <div class="exampleOutput">
+    <!-- Wrapper is for demo purposes only -->
+<div class="sg__palette greyscale-cool--x-light">
+  <table class="o-tbl--fit">
+    <thead class="o-tbl__head c-tbl__head--plain">
+      <tr>
+        <th class="o-tbl__cell">
+          <svg viewBox="0 0 8 8" class="ic ic--small ic--baseline ic--by-text">
+            <use xlink:href="dist/images/open-iconic.svg#person" class="ic__person"></use>
+          </svg>
+          Name
+        </th>
+        <th class="o-tbl__cell">ID</th>
+        <th class="o-tbl__cell">Favorite Color</th>
+      </tr>
+    </thead>
+    <tbody class="c-tbl__body--white">
+      <tr>
+        <td class="o-tbl__cell">Jim</td>
+        <td class="o-tbl__cell">00001</td>
+        <td class="o-tbl__cell">Blue</td>
+        <td class="o-tbl__cell c-tbl__cell--btn">
+          <a href="#">
+            <svg viewBox="0 0 8 8" class="ic">
+              <use xlink:href="dist/images/open-iconic.svg#chat" class="ic__chat"></use>
+            </svg>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td class="o-tbl__cell">Sue</td>
+        <td class="o-tbl__cell">00002</td>
+        <td class="o-tbl__cell">Red</td>
+        <td class="o-tbl__cell c-tbl__cell--btn">
+          <a href="#">
+            <svg viewBox="0 0 8 8" class="ic">
+              <use xlink:href="dist/images/open-iconic.svg#chat" class="ic__chat"></use>
+            </svg>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td class="o-tbl__cell">Barb</td>
+        <td class="o-tbl__cell">00003</td>
+        <td class="o-tbl__cell"><span href="#" class="u-act-natural">Green</a></td>
+        <td class="o-tbl__cell c-tbl__cell--btn">
+          <a href="#">
+            <svg viewBox="0 0 8 8" class="ic">
+              <use xlink:href="dist/images/open-iconic.svg#chat" class="ic__chat"></use>
+            </svg>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="c">&lt;!-- Wrapper is for demo purposes only --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"sg__palette greyscale-cool--x-light"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"o-tbl--fit"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;thead</span> <span class="na">class=</span><span class="s">"o-tbl__head c-tbl__head--plain"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">"o-tbl__cell"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;svg</span> <span class="na">viewBox=</span><span class="s">"0 0 8 8"</span> <span class="na">class=</span><span class="s">"ic ic--small ic--baseline ic--by-text"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"dist/images/open-iconic.svg#person"</span> <span class="na">class=</span><span class="s">"ic__person"</span><span class="nt">&gt;&lt;/use&gt;</span>
+          <span class="nt">&lt;/svg&gt;</span>
+          Name
+        <span class="nt">&lt;/th&gt;</span>
+        <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">"o-tbl__cell"</span><span class="nt">&gt;</span>ID<span class="nt">&lt;/th&gt;</span>
+        <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">"o-tbl__cell"</span><span class="nt">&gt;</span>Favorite Color<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;/thead&gt;</span>
+    <span class="nt">&lt;tbody</span> <span class="na">class=</span><span class="s">"c-tbl__body--white"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"o-tbl__cell"</span><span class="nt">&gt;</span>Jim<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"o-tbl__cell"</span><span class="nt">&gt;</span>00001<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"o-tbl__cell"</span><span class="nt">&gt;</span>Blue<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"o-tbl__cell c-tbl__cell--btn"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;svg</span> <span class="na">viewBox=</span><span class="s">"0 0 8 8"</span> <span class="na">class=</span><span class="s">"ic"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"dist/images/open-iconic.svg#chat"</span> <span class="na">class=</span><span class="s">"ic__chat"</span><span class="nt">&gt;&lt;/use&gt;</span>
+            <span class="nt">&lt;/svg&gt;</span>
+          <span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;/tr&gt;</span>
+      <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"o-tbl__cell"</span><span class="nt">&gt;</span>Sue<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"o-tbl__cell"</span><span class="nt">&gt;</span>00002<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"o-tbl__cell"</span><span class="nt">&gt;</span>Red<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"o-tbl__cell c-tbl__cell--btn"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;svg</span> <span class="na">viewBox=</span><span class="s">"0 0 8 8"</span> <span class="na">class=</span><span class="s">"ic"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"dist/images/open-iconic.svg#chat"</span> <span class="na">class=</span><span class="s">"ic__chat"</span><span class="nt">&gt;&lt;/use&gt;</span>
+            <span class="nt">&lt;/svg&gt;</span>
+          <span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;/tr&gt;</span>
+      <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"o-tbl__cell"</span><span class="nt">&gt;</span>Barb<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"o-tbl__cell"</span><span class="nt">&gt;</span>00003<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"o-tbl__cell"</span><span class="nt">&gt;&lt;span</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"u-act-natural"</span><span class="nt">&gt;</span>Green<span class="nt">&lt;/a&gt;&lt;/td&gt;</span>
+        <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"o-tbl__cell c-tbl__cell--btn"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;svg</span> <span class="na">viewBox=</span><span class="s">"0 0 8 8"</span> <span class="na">class=</span><span class="s">"ic"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"dist/images/open-iconic.svg#chat"</span> <span class="na">class=</span><span class="s">"ic__chat"</span><span class="nt">&gt;&lt;/use&gt;</span>
+            <span class="nt">&lt;/svg&gt;</span>
+          <span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;/tbody&gt;</span>
+  <span class="nt">&lt;/table&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="2_Cards" class="styleguide">Cards</h1>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <!-- Wrapper is for demo purposes only -->
+<div class="sg__palette greyscale-cool--x-light">
+  <div class="o-box c-card">
+    <h1>I'm a Card</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur dignissimos, ipsum nostrum ducimus, accusantium quo, odit amet id eum inventore, architecto ab dicta alias sed reiciendis molestias quibusdam at voluptates.</p>
+  </div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="c">&lt;!-- Wrapper is for demo purposes only --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"sg__palette greyscale-cool--x-light"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"o-box c-card"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>I'm a Card<span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur dignissimos, ipsum nostrum ducimus, accusantium quo, odit amet id eum inventore, architecto ab dicta alias sed reiciendis molestias quibusdam at voluptates.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></pre>
     </div>
   </div>

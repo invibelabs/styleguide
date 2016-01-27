@@ -1,0 +1,35 @@
+// ============================================================================
+// #CARDS
+// ============================================================================
+
+/*doc
+---
+title: Cards
+name: 2_Cards
+category: Components
+---
+```html_example
+<!-- Wrapper is for demo purposes only -->
+<div class="sg__palette greyscale-cool--x-light">
+  <div class="o-box c-card">
+    <h1>I'm a Card</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur dignissimos, ipsum nostrum ducimus, accusantium quo, odit amet id eum inventore, architecto ab dicta alias sed reiciendis molestias quibusdam at voluptates.</p>
+  </div>
+</div>
+```
+
+*/
+
+// ===== Variables =====
+
+$card-bg: palette(greyscale, white-t);
+$card-border-radius: 3px;
+
+// ===== Cards =====
+
+.c-card {
+  @extend %u-cf;
+  background: $card-bg;
+  border-radius: $card-border-radius;
+  box-shadow: 0 1px 4px $shadow;
+}

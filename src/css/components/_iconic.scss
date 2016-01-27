@@ -30,10 +30,17 @@ Icons are from [Iconic](https://useiconic.com/open) and use the SVG sprite.
 ```
 */
 
+// Default icon fill color on body, so classes can override
+svg {
+  fill: currentColor;
+}
+
 .ic {
   width: 1em;
   height: 1em;
 }
+
+// Sizing
 
 .ic--small {
   @include font-size(10px);
@@ -45,4 +52,16 @@ Icons are from [Iconic](https://useiconic.com/open) and use the SVG sprite.
 
 .ic--large {
   @include font-size(26px);
+}
+
+// Alignment
+
+.ic--baseline {
+  vertical-align: baseline;
+}
+
+// Spacing
+
+.ic--by-text {
+  margin-right: halve($spacing-unit--tiny);
 }

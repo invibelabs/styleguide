@@ -111,11 +111,6 @@ body, h1, h2, h3, h4, h5, h6 {
   color: $text-color;
 }
 
-// Default icon fill color on body, so classes can override
-body {
-  fill: $text-color;
-}
-
 // Bigger headlines use the appropriate font
 h1, h2, h3 {
   font-family: $title-font-family;
@@ -131,6 +126,7 @@ mark, .mark {
 // default link styling
 a {
   color: $link-color;
+
   &:hover {
     color: $link-hover;
   }

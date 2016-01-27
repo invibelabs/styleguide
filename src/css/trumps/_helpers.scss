@@ -12,6 +12,21 @@
   margin: -1px; padding: 0; border: 0;
 }
 
+// ===== Utility classes =====
+
+// A link that you might not know is a link...until you hover
+.u-act-natural {
+  color: $text-color; // The variable definition can be found in base - typography.scss
+  text-decoration: none;
+
+  // On hover, just give it an underline.
+  &:hover {
+    cursor: pointer;
+    color: $text-color;
+    text-decoration: underline;
+  }
+}
+
 // ===== Clearfix =====
 /**
  * For modern browsers

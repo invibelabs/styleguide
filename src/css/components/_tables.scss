@@ -34,11 +34,12 @@ Make a table cell a button, as shown below, by using the class `c-tbl__cell--btn
         <th class="o-tbl__cell">Favorite Color</th>
       </tr>
     </thead>
-    <tbody class="c-tbl__body--white">
+    <tbody>
       <tr>
         <td class="o-tbl__cell">Jim</td>
         <td class="o-tbl__cell">00001</td>
         <td class="o-tbl__cell">Blue</td>
+        <td class="o-tbl__cell--blank"></td>
         <td class="o-tbl__cell c-tbl__cell--btn">
           <a href="#">
             <svg viewBox="0 0 8 8" class="ic">
@@ -51,6 +52,7 @@ Make a table cell a button, as shown below, by using the class `c-tbl__cell--btn
         <td class="o-tbl__cell">Sue</td>
         <td class="o-tbl__cell">00002</td>
         <td class="o-tbl__cell">Red</td>
+        <td class="o-tbl__cell--blank"></td>
         <td class="o-tbl__cell c-tbl__cell--btn">
           <a href="#">
             <svg viewBox="0 0 8 8" class="ic">
@@ -63,6 +65,7 @@ Make a table cell a button, as shown below, by using the class `c-tbl__cell--btn
         <td class="o-tbl__cell">Barb</td>
         <td class="o-tbl__cell">00003</td>
         <td class="o-tbl__cell"><span href="#" class="u-act-natural">Green</a></td>
+        <td class="o-tbl__cell--blank"></td>
         <td class="o-tbl__cell c-tbl__cell--btn">
           <a href="#">
             <svg viewBox="0 0 8 8" class="ic">
@@ -87,12 +90,8 @@ $tbl-button-color:   palette(greyscale-cool, base);
 
 // The plain table head has no border around cells
 .c-tbl__head--plain .o-tbl__cell {
+  background: none;
   border: none;
-}
-
-// White background for table body
-.c-tbl__body--white {
-  background: palette(greyscale, white-t);
 }
 
 // ===== Elements =====

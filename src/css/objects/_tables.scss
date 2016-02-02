@@ -42,8 +42,9 @@ category: Base CSS
 
 // ===== Variables =====
 
-$tbl-head-color:   palette(greyscale-cool, base);
-$tbl-border-color: palette(greyscale-cool, x-light);
+$tbl-head-color:        palette(greyscale-cool, base);
+$tbl-cell-bg:           palette(greyscale, white-t);
+$tbl-cell-border-color: palette(greyscale-cool, x-light);
 
 // ===== Table =====
 
@@ -67,5 +68,13 @@ $tbl-border-color: palette(greyscale-cool, x-light);
 // Table cell default padding and border
 .o-tbl__cell {
   padding: $spacing-unit--tiny $spacing-unit--small;
-  border: 1px solid $tbl-border-color;
+  border: 1px solid $tbl-cell-border-color;
+  background-color: $tbl-cell-bg;
+}
+
+// A blank cell with no styling
+.o-tbl__cell--blank {
+  background: none;
+  border: none;
+  width: $spacing-unit--small;
 }

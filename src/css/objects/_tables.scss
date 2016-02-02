@@ -62,6 +62,7 @@ $tbl-cell-border-color: palette(greyscale-cool, x-light);
 
 // The table head uses a different text color
 .o-tbl__head {
+  @include font-size(11px);
   color: $tbl-head-color;
 }
 
@@ -78,3 +79,10 @@ $tbl-cell-border-color: palette(greyscale-cool, x-light);
   border: none;
   width: $spacing-unit--small;
 }
+
+/* Truncate
+  max-width: somesize;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+*/

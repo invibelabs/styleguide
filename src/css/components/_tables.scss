@@ -24,52 +24,69 @@ Make a table cell a button, as shown below, by using the class `c-tbl__cell--btn
   <table class="o-tbl--fit">
     <thead class="o-tbl__head c-tbl__head--plain">
       <tr>
-        <th class="o-tbl__cell">
-          <svg viewBox="0 0 8 8" class="ic ic--small ic--baseline ic--by-text">
-            <use xlink:href="dist/images/open-iconic.svg#person" class="ic__person"></use>
-          </svg>
-          Name
-        </th>
+        <th class="o-tbl__cell">Order</th>
         <th class="o-tbl__cell">ID</th>
-        <th class="o-tbl__cell">Favorite Color</th>
+        <th class="o-tbl__cell">Name</th>
+        <th class="o-tbl__cell">Response Time</th>
+        <th class="o-tbl__cell">Length</th>
+        <th class="o-tbl__cell">State</th>
+        <th class="o-tbl__cell--blank"></th>
+        <th class="o-tbl__cell">Q1</th>
+        <th class="o-tbl__cell--blank"></th>
+        <th class="o-tbl__cell"></th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td class="o-tbl__cell">Jim</td>
-        <td class="o-tbl__cell c-tbl__cell--success">00001</td>
-        <td class="o-tbl__cell">Blue</td>
+        <td class="o-tbl__cell">01</td>
+        <td class="o-tbl__cell">1109</td>
+        <td class="o-tbl__cell">Mikey Wills</td>
+        <td class="o-tbl__cell">01/16/16 5:15 PM</td>
+        <td class="o-tbl__cell">180s</td>
+        <td class="o-tbl__cell c-tbl__cell--state"><span class="c-indicator--error"></span></td>
+        <td class="o-tbl__cell--blank"></td>
+        <td class="o-tbl__cell c-tbl__cell--rating c-tbl__cell--flag"><strong>2</strong>/5</td>
         <td class="o-tbl__cell--blank"></td>
         <td class="o-tbl__cell c-tbl__cell--btn">
           <a href="#">
             <svg viewBox="0 0 8 8" class="ic">
-              <use xlink:href="dist/images/open-iconic.svg#chat" class="ic__chat"></use>
+              <use xlink:href="dist/images/open-iconic.svg#media-play" class="ic__media-play"></use>
             </svg>
           </a>
         </td>
       </tr>
       <tr>
-        <td class="o-tbl__cell c-tbl__cell--error">Sue</td>
-        <td class="o-tbl__cell">00002</td>
-        <td class="o-tbl__cell">Red</td>
+        <td class="o-tbl__cell">02</td>
+        <td class="o-tbl__cell">1021</td>
+        <td class="o-tbl__cell">Jeremy Franz</td>
+        <td class="o-tbl__cell">01/16/16 2:09 PM</td>
+        <td class="o-tbl__cell">238s</td>
+        <td class="o-tbl__cell c-tbl__cell--state"><span class="c-indicator--info"></span></td>
+        <td class="o-tbl__cell--blank"></td>
+        <td class="o-tbl__cell c-tbl__cell--rating c-tbl__cell--fav"><strong>5</strong>/5</td>
         <td class="o-tbl__cell--blank"></td>
         <td class="o-tbl__cell c-tbl__cell--btn">
           <a href="#">
             <svg viewBox="0 0 8 8" class="ic">
-              <use xlink:href="dist/images/open-iconic.svg#chat" class="ic__chat"></use>
+              <use xlink:href="dist/images/open-iconic.svg#media-play" class="ic__media-play"></use>
             </svg>
           </a>
         </td>
       </tr>
       <tr>
-        <td class="o-tbl__cell">Barb</td>
-        <td class="o-tbl__cell c-tbl__cell--warn">00003</td>
-        <td class="o-tbl__cell"><span href="#" class="u-act-natural">Green</a></td>
+        <td class="o-tbl__cell">03</td>
+        <td class="o-tbl__cell">1083</td>
+        <td class="o-tbl__cell">Fabio Gratton</td>
+        <td class="o-tbl__cell">01/16/16 8:39 AM</td>
+        <td class="o-tbl__cell">203s</td>
+        <td class="o-tbl__cell c-tbl__cell--state"><span class="c-indicator--success-hollow"></span></td>
+        <td class="o-tbl__cell--blank"></td>
+        <td class="o-tbl__cell c-tbl__cell--rating"><strong>4</strong>/5</td>
         <td class="o-tbl__cell--blank"></td>
         <td class="o-tbl__cell c-tbl__cell--btn">
           <a href="#">
             <svg viewBox="0 0 8 8" class="ic">
-              <use xlink:href="dist/images/open-iconic.svg#chat" class="ic__chat"></use>
+              <use xlink:href="dist/images/open-iconic.svg#media-play" class="ic__media-play"></use>
             </svg>
           </a>
         </td>
@@ -84,6 +101,7 @@ Make a table cell a button, as shown below, by using the class `c-tbl__cell--btn
 // ===== Variables =====
 
 $tbl-button-color:   palette(greyscale-cool, base);
+$tbl-rating-color:   palette(greyscale-cool, base);
 // $tbl-head-color variable is found in objects - tables.scss
 
 $cell-success-bg:    #EEF9F2; // 10% success color on white, turned to hex.
@@ -118,19 +136,78 @@ $cell-error-bg:      #F8EDED; // 10% error color on white, turned to hex.
   }
 }
 
-// Cell highlight colors. Used for status.
+// Rating cells are narrow and use lighter font color for the denominator
+.c-tbl__cell--rating {
+  width: 3em;  // 42px
+  color: $tbl-rating-color;
 
-.c-tbl__cell--success {
+  // The rating is bold and standard text color
+  strong {
+    color: $text-color;
+  }
+}
+
+.c-tbl__cell--state {
+  width: 4em;
+  text-align: center;
+}
+
+
+// Generic cell highlights
+
+.c-tbl__cell--success,
+%c-tbl__cell--success {
+  position: relative;
   border-color: palette(success, base);
   background-color: $cell-success-bg;
 }
 
-.c-tbl__cell--warn {
+.c-tbl__cell--warn,
+%c-tbl__cell--warn {
+  position: relative;
   border-color: palette(warning, base);
   background-color: $cell-warn-bg;
 }
 
-.c-tbl__cell--error {
+.c-tbl__cell--error,
+%c-tbl__cell--error {
+  position: relative;
   border-color: palette(error, base);
   background-color: $cell-error-bg;
+}
+
+// Application cell states
+
+// Favorited cells get the yellow palette with a star icon in the top left
+.c-tbl__cell--fav {
+  @extend %c-tbl__cell--warn;
+
+  &:before {
+    content: '';
+    display: block;
+    height: 8px;
+    width: 8px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    background: url('/dist/images/ic-star.svg');
+    background-size: contain;
+  }
+}
+
+// Flagged cells get the yellow palette with a star icon in the top left
+.c-tbl__cell--flag {
+  @extend %c-tbl__cell--error;
+
+  &:before {
+    content: '';
+    display: block;
+    height: 8px;
+    width: 8px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    background: url('/dist/images/ic-flag.svg');
+    background-size: contain;
+  }
 }

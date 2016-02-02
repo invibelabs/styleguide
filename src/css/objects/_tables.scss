@@ -51,7 +51,7 @@ $tbl-cell-border-color: palette(greyscale-cool, x-light);
 // Standard table object with left aligned content
 .o-tbl {
   text-align: left;
-  border-collapse: collapse;
+  border-collapse: separate;
 }
 
 // 100% width table

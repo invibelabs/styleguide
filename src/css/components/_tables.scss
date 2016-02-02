@@ -37,7 +37,7 @@ Make a table cell a button, as shown below, by using the class `c-tbl__cell--btn
     <tbody>
       <tr>
         <td class="o-tbl__cell">Jim</td>
-        <td class="o-tbl__cell">00001</td>
+        <td class="o-tbl__cell c-tbl__cell--success">00001</td>
         <td class="o-tbl__cell">Blue</td>
         <td class="o-tbl__cell--blank"></td>
         <td class="o-tbl__cell c-tbl__cell--btn">
@@ -49,7 +49,7 @@ Make a table cell a button, as shown below, by using the class `c-tbl__cell--btn
         </td>
       </tr>
       <tr>
-        <td class="o-tbl__cell">Sue</td>
+        <td class="o-tbl__cell c-tbl__cell--error">Sue</td>
         <td class="o-tbl__cell">00002</td>
         <td class="o-tbl__cell">Red</td>
         <td class="o-tbl__cell--blank"></td>
@@ -63,7 +63,7 @@ Make a table cell a button, as shown below, by using the class `c-tbl__cell--btn
       </tr>
       <tr>
         <td class="o-tbl__cell">Barb</td>
-        <td class="o-tbl__cell">00003</td>
+        <td class="o-tbl__cell c-tbl__cell--warn">00003</td>
         <td class="o-tbl__cell"><span href="#" class="u-act-natural">Green</a></td>
         <td class="o-tbl__cell--blank"></td>
         <td class="o-tbl__cell c-tbl__cell--btn">
@@ -85,6 +85,10 @@ Make a table cell a button, as shown below, by using the class `c-tbl__cell--btn
 
 $tbl-button-color:   palette(greyscale-cool, base);
 // $tbl-head-color variable is found in objects - tables.scss
+
+$cell-success-bg:    #EEF9F2; // 10% success color on white, turned to hex.
+$cell-warn-bg:       #FEF9E8; // 10% warning color on white, turned to hex.
+$cell-error-bg:      #F8EDED; // 10% error color on white, turned to hex.
 
 // ===== Table =====
 
@@ -112,4 +116,21 @@ $tbl-button-color:   palette(greyscale-cool, base);
       color: palette(greyscale, white-t);
     }
   }
+}
+
+// Cell highlight colors. Used for status.
+
+.c-tbl__cell--success {
+  border-color: palette(success, base);
+  background-color: $cell-success-bg;
+}
+
+.c-tbl__cell--warn {
+  border-color: palette(warning, base);
+  background-color: $cell-warn-bg;
+}
+
+.c-tbl__cell--error {
+  border-color: palette(error, base);
+  background-color: $cell-error-bg;
 }

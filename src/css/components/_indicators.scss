@@ -1,0 +1,63 @@
+// ============================================================================
+// #INDICATORS
+// ============================================================================
+
+// ===== Variables =====
+
+$ind-info:     palette(information, base);
+$ind-success:  palette(success, base);
+$ind-warn:     palette(warning, base);
+$ind-error:    palette(error, base);
+
+// ===== Indicators =====
+
+%c-indicator {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+}
+
+// Full
+
+.c-indicator--info {
+  @extend %c-indicator;
+  background-color: $ind-info;
+}
+
+.c-indicator--success {
+  @extend %c-indicator;
+  background-color: $ind-success;
+}
+
+.c-indicator--warn {
+  @extend %c-indicator;
+  background-color: $ind-warn;
+}
+
+.c-indicator--error {
+  @extend %c-indicator;
+  background-color: $ind-error;
+}
+
+// Hollow
+
+.c-indicator--info-hollow {
+  @extend %c-indicator;
+  border: 1px solid $ind-info;
+}
+
+.c-indicator--success-hollow {
+  @extend %c-indicator;
+  border: 1px solid $ind-success;
+}
+
+.c-indicator--warn-hollow {
+  @extend %c-indicator;
+  border: 1px solid $ind-warn;
+}
+
+.c-indicator--error-hollow {
+  @extend %c-indicator;
+  border: 1px solid $ind-error;
+}

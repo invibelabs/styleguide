@@ -9,30 +9,64 @@ name: 7_audio_player
 category: Components
 ---
 
-### Action Buttons
-Used as the main play/pause action in the audio player.
+### Validate Audio
+An audio player with the associated actions necessary for validation.
 
 ```html_example
-  <span class="c-audio-player__action">
-    <svg viewBox="0 0 8 8" class="ic ic--med ic__media-play">
-      <use xlink:href="dist/images/open-iconic.svg#media-play" class="ic__media-play"></use>
-    </svg>
-  </span>
-  <span class="c-audio-player__action">
-    <svg viewBox="0 0 8 8" class="ic ic--med ic__media-pause">
-      <use xlink:href="dist/images/open-iconic.svg#media-pause" class="ic__media-pause"></use>
-    </svg>
-  </span>
-```
-
-### Seek Bar
-Used to show progress in the audio player.
-
-```html_example
-  <div class="c-progress-bar">
-    <div class="c-progress-bar__progress" style="width: 34%;"></div>
+  <div class="c-validate-audio">
+    <div class="c-validate-audio__audio">
+      <span class="c-audio-player__action">
+        <svg viewBox="0 0 8 8" class="ic ic--med ic__media-play">
+          <use xlink:href="dist/images/open-iconic.svg#media-play" class="ic__media-play"></use>
+        </svg>
+      </span>
+    </div>
+    <div class="c-validate-audio__validate">
+      <div class="o-flex__container o-flex__unit--auto">
+        <div class="c-validate-audio__rate">
+          <span class="c-icon-btn__label">Rate</span>
+          <svg viewBox="0 0 8 8" class="ic c-icon-btn c-icon-btn--base is-active">
+            <use xlink:href="dist/images/open-iconic.svg#star" class="ic__star"></use>
+          </svg>
+          <svg viewBox="0 0 8 8" class="ic c-icon-btn c-icon-btn--base is-active">
+            <use xlink:href="dist/images/open-iconic.svg#star" class="ic__star"></use>
+          </svg>
+          <svg viewBox="0 0 8 8" class="ic c-icon-btn c-icon-btn--base">
+            <use xlink:href="dist/images/open-iconic.svg#star" class="ic__star"></use>
+          </svg>
+          <svg viewBox="0 0 8 8" class="ic c-icon-btn c-icon-btn--base">
+            <use xlink:href="dist/images/open-iconic.svg#star" class="ic__star"></use>
+          </svg>
+          <svg viewBox="0 0 8 8" class="ic c-icon-btn c-icon-btn--base">
+            <use xlink:href="dist/images/open-iconic.svg#star" class="ic__star"></use>
+          </svg>
+        </div>
+        <div class="c-validate-audio__fav">
+          <span class="c-icon-btn__label">Fav</span>
+          <svg viewBox="0 0 8 8" class="ic c-icon-btn c-icon-btn--warn is-active">
+            <use xlink:href="dist/images/open-iconic.svg#heart" class="ic__heart"></use>
+          </svg>
+        </div>
+        <div class="c-validate-audio__flag">
+          <span class="c-icon-btn__label">Flag</span>
+          <svg viewBox="0 0 8 8" class="ic c-icon-btn c-icon-btn--error is-active">
+            <use xlink:href="dist/images/open-iconic.svg#flag" class="ic__flag"></use>
+          </svg>
+        </div>
+        <div class="c-validate-audio__download">
+          <span class="c-validate-audio__filename">875-5-2-7-a3.mp3</span>
+          <svg viewBox="0 0 8 8" class="ic c-icon-btn">
+            <use xlink:href="dist/images/open-iconic.svg#data-transfer-download" class="ic__data-transfer-download"></use>
+          </svg>
+        </div>
+      </div>
+      <div class="o-flex__container o-flex__unit--initial">
+        <div class="c-progress-bar">
+          <div class="c-progress-bar__progress" style="width: 34%;"></div>
+        </div>
+      </div>
+    </div>
   </div>
-
 ```
 
 */
@@ -88,3 +122,61 @@ $progress-bar__progress-bg:   palette(secondary, base);
   background: $progress-bar__progress-bg;
 }
 
+// ===== Validate Audio =====
+
+// The top level wrapper of the component
+.c-validate-audio {
+  display: flex;
+
+  // The progress bar needs some margin bottom to visually center it with the rest of the component
+  .c-progress-bar {
+    margin-bottom: $spacing-unit--tiny;
+  }
+}
+
+// The left hand side play/pause button wrapper
+.c-validate-audio__audio {
+  flex: 0 0 3.428571429em; // 48px
+  align-self: center;
+}
+
+// The right hand side actions and seek bar wrapper
+.c-validate-audio__validate {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1 auto;
+  height: 2.857142857em;  // 40px
+}
+
+// The rate component wrapper
+.c-validate-audio__rate {
+  flex: 0 0 9.5em;
+  margin-right: $spacing-unit--small;
+}
+
+// The fav component wrapper
+.c-validate-audio__fav {
+  flex: 0 0 4em;
+  margin-right: $spacing-unit--small;
+}
+
+// The flag component wrapper
+.c-validate-audio__flag {
+  flex: 0 0 4em;
+  margin-right: $spacing-unit--small;
+}
+
+// The download component wrapper
+.c-validate-audio__download {
+  flex: 1 0 9.5em;
+  text-align: right;
+}
+
+// The audio filename is smaller, italic, and a subtler color
+.c-validate-audio__filename {
+  @include font-size(12px);
+  font-style: italic;
+  color: palette(greyscale-cool, base);
+  margin-right: $spacing-unit--small;
+}

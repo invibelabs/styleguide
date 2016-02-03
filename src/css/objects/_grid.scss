@@ -44,7 +44,7 @@ $susy: (
 
 $wrapper-width: 100em;  // 1400px
 
-// ===== The Grid =====
+// ===== The Susy Grid =====
 
 // The grid container
 .g-container {
@@ -74,4 +74,18 @@ $wrapper-width: 100em;  // 1400px
 // The final column
 .g-col--omega {
   @include omega();
+}
+
+// ===== Flexbox =====
+
+.o-flex__container {
+  display: flex;
+}
+
+.o-flex__unit--auto {
+  flex: auto;
+}
+
+.o-flex__unit--initial {
+  flex: 0 auto;
 }

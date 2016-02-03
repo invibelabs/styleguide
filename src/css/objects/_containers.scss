@@ -28,17 +28,3 @@ $page-container--gutter:  $spacing-unit--med;
   @extend %cf;
   padding: 0 $page-container--gutter;
 }
-
-// ===== Flex =====
-
-.o-flex__container {
-  display: flex;
-}
-
-.o-flex__unit--auto {
-  flex: auto;
-}
-
-.o-flex__unit--initial {
-  flex: 0 auto;
-}

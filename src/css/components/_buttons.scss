@@ -57,6 +57,42 @@ Group together a text button with an icon for primary/secondary actions, or add 
 </div>
 ```
 
+### Icon Button
+Icon buttons can be used for actions or toggle settings, with or without a label.
+
+```html_example
+  <div>
+    <span class="c-icon-btn__label">Rate</span>
+    <svg viewBox="0 0 8 8" class="ic c-icon-btn c-icon-btn--base is-active">
+      <use xlink:href="dist/images/open-iconic.svg#star" class="ic__star"></use>
+    </svg>
+    <svg viewBox="0 0 8 8" class="ic c-icon-btn c-icon-btn--base is-active">
+      <use xlink:href="dist/images/open-iconic.svg#star" class="ic__star"></use>
+    </svg>
+    <svg viewBox="0 0 8 8" class="ic c-icon-btn c-icon-btn--base">
+      <use xlink:href="dist/images/open-iconic.svg#star" class="ic__star"></use>
+    </svg>
+    <svg viewBox="0 0 8 8" class="ic c-icon-btn c-icon-btn--base">
+      <use xlink:href="dist/images/open-iconic.svg#star" class="ic__star"></use>
+    </svg>
+    <svg viewBox="0 0 8 8" class="ic c-icon-btn c-icon-btn--base">
+      <use xlink:href="dist/images/open-iconic.svg#star" class="ic__star"></use>
+    </svg>
+  </div>
+  <div>
+    <span class="c-icon-btn__label">Fav</span>
+    <svg viewBox="0 0 8 8" class="ic c-icon-btn c-icon-btn--warn is-active">
+      <use xlink:href="dist/images/open-iconic.svg#heart" class="ic__heart"></use>
+    </svg>
+  </div>
+  <div>
+    <span class="c-icon-btn__label">Flag</span>
+    <svg viewBox="0 0 8 8" class="ic c-icon-btn c-icon-btn--error is-active">
+      <use xlink:href="dist/images/open-iconic.svg#flag" class="ic__flag"></use>
+    </svg>
+  </div>
+```
+
 */
 
 // ===== Variables =====
@@ -177,4 +213,53 @@ $btn--subtle__color--hover:  palette(greyscale-cool, dark);
 .c-btn-group__right {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+}
+
+// Icon buttons are subtle when not active and have a hover state
+.c-icon-btn {
+  fill: palette(greyscale-cool, light);
+
+  &:hover {
+    fill: palette(greyscale-cool, base);
+    cursor: pointer;
+  }
+}
+
+// The label is inline small caps next to the icon
+.c-icon-btn__label {
+  @include font-size(10px);
+  font-weight: $font-weight--bold;
+  text-transform: uppercase;
+  color: palette(greyscale-cool, base);
+  display: inline-block;
+  margin-right: $spacing-unit--tiny;
+}
+
+// Icon Button - Active States
+
+// When active, the icon is text color
+.c-icon-btn--base.is-active {
+  fill: palette(primary, x-dark);
+
+  &:hover {
+    fill: palette(greyscale-cool, base);
+  }
+}
+
+// When active, the icon is warning color
+.c-icon-btn--warn.is-active {
+  fill: palette(warning, base);
+
+  &:hover {
+    fill: palette(greyscale-cool, base);
+  }
+}
+
+// When active, the icon is error color
+.c-icon-btn--error.is-active {
+  fill: palette(error, base);
+
+  &:hover {
+    fill: palette(greyscale-cool, base);
+  }
 }

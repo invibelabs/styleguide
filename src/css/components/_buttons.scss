@@ -61,12 +61,10 @@ Group together a text button with an icon for primary/secondary actions, or add 
 Icon buttons can be used for actions or toggle settings, with or without a label.
 
 ```html_example
-  <div>
-    <span class="c-icon-btn__label">Flag</span>
-    <svg viewBox="0 0 8 8" class="ic c-icon-btn c-icon-btn--error is-active">
-      <use xlink:href="dist/images/open-iconic.svg#flag" class="ic__flag"></use>
-    </svg>
-  </div>
+<span class="c-icon-btn__label">Flag</span>
+<svg viewBox="0 0 8 8" class="ic c-icon-btn c-icon-btn--error is-active">
+  <use xlink:href="dist/images/open-iconic.svg#flag" class="ic__flag"></use>
+</svg>
 ```
 
 */

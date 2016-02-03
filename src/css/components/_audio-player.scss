@@ -13,60 +13,60 @@ category: Components
 An audio player with the associated actions necessary for validation.
 
 ```html_example
-  <div class="c-validate-audio">
-    <div class="c-validate-audio__audio">
-      <span class="c-audio-player__action">
-        <svg viewBox="0 0 8 8" class="ic ic--med ic__media-play">
-          <use xlink:href="dist/images/open-iconic.svg#media-play" class="ic__media-play"></use>
+<div class="c-validate-audio">
+  <div class="c-validate-audio__audio">
+    <span class="c-audio-player__action">
+      <svg viewBox="0 0 8 8" class="ic ic--med ic__media-play">
+        <use xlink:href="dist/images/open-iconic.svg#media-play" class="ic__media-play"></use>
+      </svg>
+    </span>
+  </div>
+  <div class="c-validate-audio__validate">
+    <div class="o-flex__container o-flex__unit--auto">
+      <div class="c-validate-audio__rate">
+        <span class="c-icon-btn__label">Rate</span>
+        <svg viewBox="0 0 8 8" class="ic c-icon-btn c-icon-btn--base is-active">
+          <use xlink:href="dist/images/open-iconic.svg#star" class="ic__star"></use>
         </svg>
-      </span>
-    </div>
-    <div class="c-validate-audio__validate">
-      <div class="o-flex__container o-flex__unit--auto">
-        <div class="c-validate-audio__rate">
-          <span class="c-icon-btn__label">Rate</span>
-          <svg viewBox="0 0 8 8" class="ic c-icon-btn c-icon-btn--base is-active">
-            <use xlink:href="dist/images/open-iconic.svg#star" class="ic__star"></use>
-          </svg>
-          <svg viewBox="0 0 8 8" class="ic c-icon-btn c-icon-btn--base is-active">
-            <use xlink:href="dist/images/open-iconic.svg#star" class="ic__star"></use>
-          </svg>
-          <svg viewBox="0 0 8 8" class="ic c-icon-btn c-icon-btn--base">
-            <use xlink:href="dist/images/open-iconic.svg#star" class="ic__star"></use>
-          </svg>
-          <svg viewBox="0 0 8 8" class="ic c-icon-btn c-icon-btn--base">
-            <use xlink:href="dist/images/open-iconic.svg#star" class="ic__star"></use>
-          </svg>
-          <svg viewBox="0 0 8 8" class="ic c-icon-btn c-icon-btn--base">
-            <use xlink:href="dist/images/open-iconic.svg#star" class="ic__star"></use>
-          </svg>
-        </div>
-        <div class="c-validate-audio__fav">
-          <span class="c-icon-btn__label">Fav</span>
-          <svg viewBox="0 0 8 8" class="ic c-icon-btn c-icon-btn--warn is-active">
-            <use xlink:href="dist/images/open-iconic.svg#heart" class="ic__heart"></use>
-          </svg>
-        </div>
-        <div class="c-validate-audio__flag">
-          <span class="c-icon-btn__label">Flag</span>
-          <svg viewBox="0 0 8 8" class="ic c-icon-btn c-icon-btn--error is-active">
-            <use xlink:href="dist/images/open-iconic.svg#flag" class="ic__flag"></use>
-          </svg>
-        </div>
-        <div class="c-validate-audio__download">
-          <span class="c-validate-audio__filename">875-5-2-7-a3.mp3</span>
-          <svg viewBox="0 0 8 8" class="ic c-icon-btn">
-            <use xlink:href="dist/images/open-iconic.svg#data-transfer-download" class="ic__data-transfer-download"></use>
-          </svg>
-        </div>
+        <svg viewBox="0 0 8 8" class="ic c-icon-btn c-icon-btn--base is-active">
+          <use xlink:href="dist/images/open-iconic.svg#star" class="ic__star"></use>
+        </svg>
+        <svg viewBox="0 0 8 8" class="ic c-icon-btn c-icon-btn--base">
+          <use xlink:href="dist/images/open-iconic.svg#star" class="ic__star"></use>
+        </svg>
+        <svg viewBox="0 0 8 8" class="ic c-icon-btn c-icon-btn--base">
+          <use xlink:href="dist/images/open-iconic.svg#star" class="ic__star"></use>
+        </svg>
+        <svg viewBox="0 0 8 8" class="ic c-icon-btn c-icon-btn--base">
+          <use xlink:href="dist/images/open-iconic.svg#star" class="ic__star"></use>
+        </svg>
       </div>
-      <div class="o-flex__container o-flex__unit--initial">
-        <div class="c-progress-bar">
-          <div class="c-progress-bar__progress" style="width: 34%;"></div>
-        </div>
+      <div class="c-validate-audio__fav">
+        <span class="c-icon-btn__label">Fav</span>
+        <svg viewBox="0 0 8 8" class="ic c-icon-btn c-icon-btn--warn is-active">
+          <use xlink:href="dist/images/open-iconic.svg#heart" class="ic__heart"></use>
+        </svg>
+      </div>
+      <div class="c-validate-audio__flag">
+        <span class="c-icon-btn__label">Flag</span>
+        <svg viewBox="0 0 8 8" class="ic c-icon-btn c-icon-btn--error is-active">
+          <use xlink:href="dist/images/open-iconic.svg#flag" class="ic__flag"></use>
+        </svg>
+      </div>
+      <div class="c-validate-audio__download">
+        <span class="c-validate-audio__filename">875-5-2-7-a3.mp3</span>
+        <svg viewBox="0 0 8 8" class="ic c-icon-btn">
+          <use xlink:href="dist/images/open-iconic.svg#data-transfer-download" class="ic__data-transfer-download"></use>
+        </svg>
+      </div>
+    </div>
+    <div class="o-flex__container o-flex__unit--initial">
+      <div class="c-progress-bar">
+        <div class="c-progress-bar__progress" style="width: 34%;"></div>
       </div>
     </div>
   </div>
+</div>
 ```
 
 */

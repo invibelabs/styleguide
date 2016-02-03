@@ -62,30 +62,6 @@ Icon buttons can be used for actions or toggle settings, with or without a label
 
 ```html_example
   <div>
-    <span class="c-icon-btn__label">Rate</span>
-    <svg viewBox="0 0 8 8" class="ic c-icon-btn c-icon-btn--base is-active">
-      <use xlink:href="dist/images/open-iconic.svg#star" class="ic__star"></use>
-    </svg>
-    <svg viewBox="0 0 8 8" class="ic c-icon-btn c-icon-btn--base is-active">
-      <use xlink:href="dist/images/open-iconic.svg#star" class="ic__star"></use>
-    </svg>
-    <svg viewBox="0 0 8 8" class="ic c-icon-btn c-icon-btn--base">
-      <use xlink:href="dist/images/open-iconic.svg#star" class="ic__star"></use>
-    </svg>
-    <svg viewBox="0 0 8 8" class="ic c-icon-btn c-icon-btn--base">
-      <use xlink:href="dist/images/open-iconic.svg#star" class="ic__star"></use>
-    </svg>
-    <svg viewBox="0 0 8 8" class="ic c-icon-btn c-icon-btn--base">
-      <use xlink:href="dist/images/open-iconic.svg#star" class="ic__star"></use>
-    </svg>
-  </div>
-  <div>
-    <span class="c-icon-btn__label">Fav</span>
-    <svg viewBox="0 0 8 8" class="ic c-icon-btn c-icon-btn--warn is-active">
-      <use xlink:href="dist/images/open-iconic.svg#heart" class="ic__heart"></use>
-    </svg>
-  </div>
-  <div>
     <span class="c-icon-btn__label">Flag</span>
     <svg viewBox="0 0 8 8" class="ic c-icon-btn c-icon-btn--error is-active">
       <use xlink:href="dist/images/open-iconic.svg#flag" class="ic__flag"></use>

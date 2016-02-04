@@ -1,0 +1,61 @@
+// ============================================================================
+// #LISTS
+// ============================================================================
+
+/*doc
+---
+title: Lists
+name: 2_lists
+category: Components
+---
+
+### Key Value Pair
+A simple list of keys and their associated values, styled & separated.
+
+```html_example
+<div class="c-key-value">
+  <svg viewBox="0 0 8 8" class="c-key-value__icon ic ic--small">
+    <use xlink:href="dist/images/open-iconic.svg#person" class="ic__person"></use>
+  </svg>
+  <span class="c-key-value__key">Name:</span>
+  <span class="c-key-value__value">Mikey Wills</span>
+</div>
+<div class="c-key-value">
+  <svg viewBox="0 0 8 8" class="c-key-value__icon ic ic--small">
+    <use xlink:href="dist/images/open-iconic.svg#envelope-closed" class="ic__envelope-closed"></use>
+  </svg>
+  <span class="c-key-value__key">Email:</span>
+  <span class="c-key-value__value">mikey@muke.me</span>
+</div>
+```
+
+*/
+
+// ===== Variables =====
+
+$kv-key-color:  palette(greyscale-cool, base);
+
+// ===== Key Value List =====
+
+// The wrapper for a key value pair. Stays on one line and hides text overflow.
+.c-key-value {
+  @include font-size(12px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: default;
+}
+
+// The icon as aligned on the left to match the key
+.c-key-value__icon {
+  fill: $kv-key-color;
+  vertical-align: baseline;
+  margin-right: $spacing-unit--tiny;
+}
+
+// The key is bold and lighter in color
+.c-key-value__key {
+  color: $kv-key-color;
+  font-weight: $font-weight--bold;
+  margin-right: $spacing-unit--tiny;
+}

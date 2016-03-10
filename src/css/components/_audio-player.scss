@@ -62,6 +62,7 @@ An audio player with the associated actions necessary for validation.
     </div>
     <div class="o-flex__container o-flex__unit--initial">
       <div class="c-progress-bar">
+        <div class="c-progress-bar__buffer" style="width: 83%;"></div>
         <div class="c-progress-bar__progress" style="width: 34%;"></div>
       </div>
     </div>
@@ -79,6 +80,7 @@ $ap-action-button-color:      palette(greyscale, white-t);
 
 $progress-bar-bg:             palette(greyscale-cool, x-light);
 $progress-bar__progress-bg:   palette(secondary, base);
+$progress-bar__buffer-bg:     palette(secondary, x-light);
 
 // ===== Audio Player =====
 
@@ -121,6 +123,14 @@ $progress-bar__progress-bg:   palette(secondary, base);
   bottom: 0;
   background: $progress-bar__progress-bg;
 }
+
+.c-progress-bar__buffer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: $progress-bar__buffer-bg;
+}
+
 
 // ===== Validate Audio =====
 

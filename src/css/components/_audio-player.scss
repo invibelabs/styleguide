@@ -25,6 +25,9 @@ An audio player with the associated actions necessary for validation.
     <div class="o-flex__container o-flex__unit--auto">
       <div class="c-validate-audio__rate">
         <span class="c-icon-btn__label">Rate</span>
+        <svg viewBox="0 0 8 8" class="ic c-icon-btn c-icon-btn--error">
+          <use xlink:href="dist/images/open-iconic.svg#ban" class="ic__ban"></use>
+        </svg>
         <svg viewBox="0 0 8 8" class="ic c-icon-btn c-icon-btn--base is-active">
           <use xlink:href="dist/images/open-iconic.svg#star" class="ic__star"></use>
         </svg>
@@ -161,7 +164,7 @@ $progress-bar__buffer-bg:     palette(secondary, x-light);
 
 // The rate component wrapper
 .c-validate-audio__rate {
-  flex: 0 0 9.5em;
+  flex: 0 0 10.5em;
   margin-right: $spacing-unit--small;
 }
 

@@ -47,6 +47,7 @@ Projects are structured following the [ITCSS](http://itcss.io/) guidelines. Each
 |   |– _iconic.scss               # Iconic svg sprite icons
 |   |– _indicators.scss           # Indicator bubbles
 |   |– _buttons.scss              # Special button components
+|   |– _tags.scss                 # Tag component
 |   |– _lists.scss                # List like components
 |   |– _cards.scss                # Little cardy content capsules
 |   |– _tables.scss               # Special table related components
@@ -106,6 +107,7 @@ Projects are structured following the [ITCSS](http://itcss.io/) guidelines. Each
   'components/iconic',
   'components/indicators',
   'components/buttons',
+  'components/tags',
   'components/lists',
   'components/cards',
   'components/tables',

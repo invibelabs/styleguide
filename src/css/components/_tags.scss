@@ -1,0 +1,68 @@
+// ============================================================================
+// #TAGS
+// ============================================================================
+
+/*doc
+---
+title: Tags
+name: 1_tags
+category: Components
+---
+
+### Tags
+User editable tag components
+
+```html_example
+<span class="c-tag">
+  <svg viewBox="0 0 8 8" class="ic">
+  <use xlink:href="dist/images/open-iconic.svg#tag" class="ic__tag"></use>
+  </svg>
+  Tag Name
+</span>
+<span class="c-tag">
+  <svg viewBox="0 0 8 8" class="ic">
+  <use xlink:href="dist/images/open-iconic.svg#tag" class="ic__tag"></use>
+  </svg>
+  Another Tag
+</span>
+<br/>
+<span class="c-tag c-tag--new">
+  <svg viewBox="0 0 8 8" class="ic">
+  <use xlink:href="dist/images/open-iconic.svg#plus" class="ic__plus"></use>
+  </svg>
+  Add tag...
+</span>
+```
+
+*/
+// ===== Variables =====
+
+$tag-color:         palette(greyscale-cool, base);
+$tag-color--hover:  palette(greyscale-cool, dark);
+
+$tag-border:        $tag-color;
+$tag-border--hover: $tag-color--hover;
+
+// ===== Tags =====
+
+.c-tag {
+  @include font-size(12px);
+  display: inline-block;
+  padding: 0 0.75em;
+  margin: 0 0.25em 0.75em;
+  font-weight: $font-weight--bold;
+  color: $tag-color;
+  border: 1px solid $tag-border;
+  border-radius: 1em;
+
+  .ic {
+    @include font-size(9px);
+    vertical-align: baseline;
+  }
+
+  &:hover {
+    cursor: pointer;
+    color: $tag-color--hover;
+    border-color: $tag-border--hover;
+  }
+}

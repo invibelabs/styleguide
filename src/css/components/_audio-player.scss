@@ -117,6 +117,10 @@ $progress-bar__buffer-bg:     palette(secondary, x-light);
   height: 4px;
   background-color: $progress-bar-bg;
   overflow: hidden;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 // The inside of the progress bar

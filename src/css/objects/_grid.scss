@@ -89,3 +89,11 @@ $wrapper-width: 100em;  // 1400px
 .o-flex__unit--initial {
   flex: 0 auto;
 }
+
+.o-flex__unit--main {
+  flex: 1;
+}
+
+.o-flex__unit--aside {
+  flex: 0 0 21em;
+}

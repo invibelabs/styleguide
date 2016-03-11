@@ -69,6 +69,7 @@ input[type="tel"],
 input[type="url"],
 textarea {
   padding: $form-padding-unit;
+  margin-bottom: $spacing-unit--small;
   outline: none;
   border: 1px solid $form-border-color;
   border-radius: $form-border-radius;
@@ -83,6 +84,7 @@ textarea {
 textarea {
   width: 100%;
   min-height: 5em;
+  margin-bottom: $spacing-unit--small;
 }
 
 // Labels are bold text right above their input field

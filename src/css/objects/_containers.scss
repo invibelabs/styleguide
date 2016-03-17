@@ -36,7 +36,7 @@ $page-bg:                 #f1eefd;
 // ===== Workspace =====
 // The main "workspace" of the app scrolls with fixed top and side nav
 .o-workspace {
-  overflow-x: scroll;
+  overflow-y: scroll;
   position: relative;
 }
 

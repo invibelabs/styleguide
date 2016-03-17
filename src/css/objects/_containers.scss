@@ -10,7 +10,7 @@ category: Layouts
 ---
 
 ```html_example
-<div class="o-page-container">
+<div class="o-container">
   <h1>My Page</h1>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil ipsa atque, dicta. Nobis consectetur dicta sequi, quo quidem porro quas ad asperiores quia, libero labore ut doloribus iure totam deserunt!</p>
 </div>
@@ -21,10 +21,46 @@ category: Layouts
 // ===== Variables =====
 
 $page-container--gutter:  $spacing-unit--med;
+$page-container--leader:  $spacing-unit--med + 45px;
+$page-bg:                 #f1eefd;
 
-// ===== Container =====
+// ===== Page =====
+// The entire page, containing the side nav and main workspace is 100% height minus top nav
+.o-page {
+  @extend %u-cf;
+  background: $page-bg;
+  display: flex;
+  height: calc(100vh - 4.285714286em);  // 60px - the height of the main header
+}
 
-.o-page-container {
-  @extend %cf;
+// ===== Workspace =====
+// The main "workspace" of the app scrolls with fixed top and side nav
+.o-workspace {
+  overflow-x: scroll;
+  position: relative;
+}
+
+// Fixed just below the nav bar, 100% width inside the workspace
+.o-workspace__head {
+  position: fixed;
+  top: 4.285714286em;
+  width: 100%;
+  z-index: 100;
+}
+
+// ===== Containers =====
+
+.o-container--flush {
+  @extend %u-cf;
   padding: 0 $page-container--gutter;
+}
+
+.o-container {
+  @extend %u-cf;
+  padding: $page-container--gutter;
+}
+
+.o-container--leader {
+  @extend %u-cf;
+  padding: $page-container--leader $page-container--gutter $page-container--gutter;
 }

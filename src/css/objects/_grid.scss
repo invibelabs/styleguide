@@ -13,7 +13,7 @@ category: Layouts
 All grid related classes are prefixed with the `.g-` namespace.
 
 ```html_example
-<div class="g-container">
+<div class="g-wrapper">
   <p>This is a susy container</p>
 </div>
 ```
@@ -21,7 +21,7 @@ All grid related classes are prefixed with the `.g-` namespace.
 ## Columns
 
 ```html_example
-<div class="g-container">
+<div class="g-wrapper">
   <div class="g-col">1 of 1</div>
   <div class="g-col--1-2">1 of 2</div>
   <div class="g-col--1-2 g-col--omega">1 of 2</div>
@@ -42,13 +42,14 @@ $susy: (
   gutters: 0.3,
 );
 
-$wrapper-width: 100em;  // 1400px
+$wrapper-width: 100%;  // 1400px
 
 // ===== The Susy Grid =====
 
-// The grid container
-.g-container {
+// The grid wrapper
+.g-wrapper {
   @include container($wrapper-width);
+  width: 100%;
 }
 
 // Single column
@@ -78,8 +79,9 @@ $wrapper-width: 100em;  // 1400px
 
 // ===== Flexbox =====
 
-.o-flex__container {
+.o-flex__wrapper {
   display: flex;
+  width: 100%;
 }
 
 .o-flex__unit--auto {
@@ -90,10 +92,13 @@ $wrapper-width: 100em;  // 1400px
   flex: 0 auto;
 }
 
+// The main area of the flexbox sidebar layout
 .o-flex__unit--main {
   flex: 1;
+  padding-right: $spacing-unit;
 }
 
+// The sidebar of the flexbox sidebar layout
 .o-flex__unit--aside {
   flex: 0 0 21em;
 }

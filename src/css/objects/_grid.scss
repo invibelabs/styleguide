@@ -95,8 +95,15 @@ $wrapper-width: 100%;  // 1400px
 // The main area of the flexbox sidebar layout
 .o-flex__unit--main {
   flex: 1;
-  padding-right: $spacing-unit;
+  padding-right: $spacing-unit--med;
 }
+
+// The main area of the flexbox sidebar layout
+.o-flex__unit--main--right {
+  flex: 1;
+  padding-left: $spacing-unit--med;
+}
+
 
 // The sidebar of the flexbox sidebar layout
 .o-flex__unit--aside {

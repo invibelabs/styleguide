@@ -42,6 +42,10 @@ $timeline__node-size: 8px;
   position: relative;
   margin: $spacing-unit--med auto $spacing-unit;
 
+  .c-timeline__node:last-child {
+    margin-bottom: 0;
+  }
+
   // Add an end to the timeline
   &:after {
     content: '';
@@ -53,6 +57,7 @@ $timeline__node-size: 8px;
     height: 1px;
     width: 9px;
   }
+
 }
 
 // Each node has a border left to create a timeline

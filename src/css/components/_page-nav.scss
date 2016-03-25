@@ -73,3 +73,27 @@ $page-nav-border--active: palette(secondary, base);
     border-bottom-color: $page-nav-border--active;
   }
 }
+
+// ===== Page Actions =====
+
+.c-page-actions {
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: $spacing-unit;
+  margin-bottom: $spacing-unit;
+  border-bottom: 1px solid palette(greyscale-cool, x-light);
+}
+
+.c-page-actions__search {
+
+  .c-btn-input {
+    margin-bottom: 0;
+  }
+}
+
+.c-page-actions__filters {
+
+  .c-inline-list {
+    margin: 0;
+  }
+}

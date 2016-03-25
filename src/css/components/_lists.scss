@@ -59,3 +59,96 @@ $kv-key-color:  palette(greyscale-cool, base);
   font-weight: $font-weight--bold;
   margin-right: $spacing-unit--tiny;
 }
+
+// ===== Inline List =====
+
+.c-inline-list {
+  list-style: none;
+  padding: 0;
+}
+
+.c-inline-list__item {
+  display: inline;
+  margin-right: $spacing-unit;
+}
+
+.c-inline-list__link {
+  @include font-size(11px);
+  color: palette(greyscale-cool, base);
+  font-weight: $font-weight--bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+
+  &:hover {
+    color: palette(primary, dark);
+  }
+
+  &.is-active {
+    color: palette(primary, dark);
+    border-bottom-color: palette(primary, dark);
+  }
+}
+
+// ===== Link List =====
+
+// Remove unordered list styles
+.c-link-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+// The wrapper for the link, and if it has a reveal element, reveal on hover
+.c-link-list__item {
+  display: block;
+  min-height: 2em;
+  position: relative;
+
+  &:hover {
+
+    .c-link-list__reveal {
+      visibility: visible;
+      opacity: 1;
+      right: $spacing-unit--tiny;
+    }
+  }
+
+}
+
+// The link is a block with hover and active states
+.c-link-list__link {
+  display: block;
+  min-height: 2em;
+  padding: $spacing-unit--tiny $spacing-unit--tiny $spacing-unit--tiny $spacing-unit--small;
+  border-left: 2px solid transparent;
+  font-weight: $font-weight--bold;
+  text-decoration: none;
+  color: palette(greyscale-cool, base);
+  transition: all 0.125s ease-in-out;
+
+  &:hover {
+    color: palette(greyscale-cool, dark);
+    border-left-color: palette(greyscale-cool, light);
+  }
+
+  &.is-active {
+    border-left-color: palette(secondary, base);
+    color: palette(primary, x-dark);
+    background-image:
+      linear-gradient(
+        to right,
+        rgba(palette(secondary, base), 0.1), transparent
+      );
+  }
+}
+
+// A reveal item shows up on the right edge of the list item on hover
+.c-link-list__reveal {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  right: $spacing-unit--small;
+  top: $spacing-unit--tiny;
+  transition: all 0.125s ease-in-out;
+}

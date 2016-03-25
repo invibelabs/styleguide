@@ -76,6 +76,11 @@ $btn--action__bg:            palette(success, base);
 $btn--action__color--hover:  palette(greyscale, white-t);
 $btn--action__bg--hover:     palette(success, dark);
 
+$btn--warn__color:           palette(greyscale, white-t);
+$btn--warn__bg:              palette(error, base);
+$btn--warn__color--hover:    palette(greyscale, white-t);
+$btn--warn__bg--hover:       palette(error, dark);
+
 $btn--dark__color:           palette(greyscale, white-t);
 $btn--dark__bg:              palette(primary, dark);
 $btn--dark__color--hover:    palette(greyscale, white-t);
@@ -104,6 +109,19 @@ $btn--subtle__color--hover:  palette(greyscale-cool, dark);
     color: $btn--action__color--hover;
     fill: $btn--action__color--hover;
     background-color: $btn--action__bg--hover;
+  }
+}
+
+// The warn button is the color of an error
+.c-btn--warn {
+  color: $btn--warn__color;
+  fill: $btn--warn__color;
+  background-color: $btn--warn__bg;
+
+  &:hover {
+    color: $btn--warn__color--hover;
+    fill: $btn--warn__color--hover;
+    background-color: $btn--warn__bg--hover;
   }
 }
 
@@ -187,6 +205,24 @@ $btn--subtle__color--hover:  palette(greyscale-cool, dark);
 .c-btn-group__right {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+}
+
+// Button and Input pair bumps them up next to one another
+.c-btn-input {
+  display: flex;
+  margin-bottom: $spacing-unit--small;
+
+  .c-btn-input__input {
+    margin-bottom: 0 ;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: 0;
+  }
+
+  .c-btn-input__btn {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
 }
 
 // ===== Icon Buttons =====

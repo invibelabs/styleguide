@@ -32,4 +32,9 @@ $card-border-radius: 3px;
   background: $card-bg;
   border-radius: $card-border-radius;
   box-shadow: 0 1px 4px $shadow;
+
+  // When padded, remove margin top from first child
+  &.o-box :first-child {
+    margin-top: 0;
+  }
 }

@@ -102,6 +102,8 @@ Make a table cell a button, as shown below, by using the class `c-tbl__cell--btn
 
 $tbl-button-color:   palette(greyscale-cool, base);
 $tbl-rating-color:   palette(greyscale-cool, base);
+$tbl-count-color:    palette(primary, dark);
+$tbl-note-color:     palette(greyscale-cool, base);
 // $tbl-head-color variable is found in objects - tables.scss
 
 $cell-success-bg:    #EEF9F2; // 10% success color on white, turned to hex.
@@ -147,6 +149,20 @@ $cell-error-bg:      #F8EDED; // 10% error color on white, turned to hex.
   }
 }
 
+// Count cells are centered and bold with variant text color
+.c-tbl__cell--count {
+  text-align: center;
+  color: $tbl-count-color;
+  font-weight: $font-weight--bold;
+}
+
+// Note cells have smaller font size and lighter text
+.c-tbl__cell--note {
+  @include font-size(12px);
+  color: $tbl-note-color;
+}
+
+// The state is centered and fixed width
 .c-tbl__cell--state {
   width: 4em;
   text-align: center;

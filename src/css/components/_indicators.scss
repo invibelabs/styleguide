@@ -61,3 +61,34 @@ $ind-error:    palette(error, base);
   @extend %c-indicator;
   border: 1px solid $ind-error;
 }
+
+// ===== Chips =====
+
+%c-chip {
+  @include font-size(10px);
+  line-height: 1.3;
+  display: inline-block;
+  padding: 0.1em 0.5em;
+  margin: 0 0.25em;
+  border-radius: 4px;
+  color: palette(greyscale, white-t);
+  font-weight: $font-weight--bold;
+  text-transform: uppercase;
+}
+
+.c-chip--info {
+  @extend %c-chip;
+  background: $ind-info;
+}
+
+.c-chip--success {
+  @extend %c-chip;
+  background: $ind-success;
+}
+
+.c-chip--warn {
+  @extend %c-chip;
+  background: $ind-warn;
+}
+
+

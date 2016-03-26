@@ -69,7 +69,6 @@ input[type="tel"],
 input[type="url"],
 textarea {
   padding: $form-padding-unit;
-  margin-bottom: $spacing-unit--small;
   outline: none;
   border: 1px solid $form-border-color;
   border-radius: $form-border-radius;
@@ -79,12 +78,16 @@ textarea {
   vertical-align: middle;
   transition-duration: 0.15s;
   transition-timing-function: ease-in;
+
+  &:focus {
+    border-color: palette(secondary, light);
+  }
 }
 
 textarea {
   width: 100%;
+  max-width: 100%;
   min-height: 5em;
-  margin-bottom: $spacing-unit--small;
 }
 
 // Labels are bold text right above their input field
@@ -113,6 +116,88 @@ label {
 :-ms-input-placeholder {
    -webkit-font-smoothing: antialiased;
 }
+
+// ===== Form Elements =====
+
+.f-text,
+.f-text--small,
+.f-text--block,
+.f-textarea {
+  background: rgba(palette(secondary, light), 0.04);
+  max-width: 100%;
+}
+
+.f-text {
+  min-width: 14em;
+}
+
+.f-text--small {
+  min-width: 3.214285714em;
+}
+
+.f-text--block {
+  width: 100%;
+}
+
+.f-textarea {
+  height: 3.214285714em;
+  min-height: 3.214285714em;
+  resize: none;
+}
+
+.f-multi-select {
+  label {
+    margin-right: $spacing-unit--small;
+  }
+}
+
+// Group
+
+.f-group,
+.f-group--inline {
+  margin-bottom: $spacing-unit;
+}
+
+.f-group--inline {
+  margin-right: $spacing-unit;
+}
+
+.f-group__label {
+
+}
+
+.f-group__title {
+  margin: 0;
+}
+
+.f-group__subtitle {
+  margin: 0;
+  color: palette(greyscale-cool, base);
+}
+
+.f-group__note {
+  @include font-size(12px);
+  margin: 0;
+  color: palette(greyscale-cool, base);
+}
+
+// Section
+.f-section {
+  padding-top: $spacing-unit;
+  border-top: 1px solid palette(greyscale-cool, x-light);
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.f-section__title {
+  color: palette(greyscale-cool, base);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
 
 // ===== WTF Forms =====
 
